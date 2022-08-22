@@ -2,8 +2,12 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: intro
-chapters:
-- file: markdown
-- file: notebooks
-- file: markdown-notebooks
+root: docs/0_intro
+
+parts:
+- caption: 1 - Empecemos
+  chapters:
+  - file: docs/1a_python_que_es
+  - file: docs/1b_python_caracteristicas
+  - file: docs/1c_anaconda
+  - file: docs/1d_jupyter
