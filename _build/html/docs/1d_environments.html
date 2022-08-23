@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Probando notebooks &#8212; Tutorial Python para herramientas geospaciales</title>
+    <title>Environments &#8212; Tutorial Python para herramientas geospaciales</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,6 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Jupyter Notebook" href="1e_jupyter.html" />
     <link rel="prev" title="Distribución Anaconda" href="1c_anaconda.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -135,7 +136,29 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
+   Environments
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="1e_jupyter.html">
+   Jupyter Notebook
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="1f_jupyter_notebook.html">
    Probando notebooks
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  2 - Datos vectoriales
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="2a_datos_vectoriales.html">
+   ¿Qué es Python?
   </a>
  </li>
 </ul>
@@ -189,35 +212,6 @@ title="Toggle navigation"
         
     </div>
     <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/f-machado/pygeo_book/master?urlpath=tree/docs/1d_jupyter.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
->
-  
-
-<span class="headerbtn__icon-container">
-  
-    <img src="../_static/images/logo_binder.svg">
-  </span>
-<span class="headerbtn__text-container">Binder</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
 <button onclick="toggleFullScreen()"
   class="headerbtn"
   data-toggle="tooltip"
@@ -257,7 +251,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/f-machado/pygeo_book/issues/new?title=Issue%20on%20page%20%2Fdocs/1d_jupyter.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/f-machado/pygeo_book/issues/new?title=Issue%20on%20page%20%2Fdocs/1d_environments.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -285,7 +279,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/docs/1d_jupyter.ipynb"
+        <a href="../_sources/docs/1d_environments.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -296,7 +290,7 @@ title="Download source file"
 <span class="headerbtn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="headerbtn__text-container">.ipynb</span>
+<span class="headerbtn__text-container">.md</span>
 </a>
 
       </li>
@@ -322,23 +316,60 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#el-entorno-conda-y-su-uso-dentro-de-la-distribucion-anaconda">
+   El entorno conda y su uso dentro de la distribución Anaconda
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Probando notebooks</h1>
+                <h1>Environments</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#el-entorno-conda-y-su-uso-dentro-de-la-distribucion-anaconda">
+   El entorno conda y su uso dentro de la distribución Anaconda
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -346,50 +377,32 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="probando-notebooks">
-<span id="file-types-notebooks"></span><h1>Probando notebooks<a class="headerlink" href="#probando-notebooks" title="Permalink to this headline">#</a></h1>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">import</span> <span class="nn">re</span>
-<span class="c1">#import rasterio as rio</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">listar_tiff</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">recursive</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
-    <span class="n">lista</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="k">for</span> <span class="n">file_name</span> <span class="ow">in</span> <span class="n">glob</span><span class="o">.</span><span class="n">iglob</span><span class="p">(</span><span class="n">path</span><span class="o">+</span><span class="s1">&#39;**\*.tif&#39;</span><span class="p">,</span> <span class="n">recursive</span> <span class="o">=</span> <span class="n">recursive</span><span class="p">):</span>
-        <span class="c1">#print(file_name)</span>
-        <span class="n">lista</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">file_name</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">lista</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;..&#39;</span><span class="p">)</span>
-<span class="n">current_work_directory</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">current_work_directory</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\Fede\Documents\CONAE\Book\pygeo_book
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">archivo_tiff</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;Interferogram_flat.tif&#39;</span>
-</pre></div>
-</div>
-</div>
-</div>
+  <section id="environments">
+<h1>Environments<a class="headerlink" href="#environments" title="Permalink to this headline">#</a></h1>
+<p>Un <em>environment</em>, o entorno virtual, es una copia de Python que tiene como características estar aislada y operativa bajo un nombre específico. Este entorno matiene sus propios archivos, directorios y rutas de modo tal que se puede trabajar con específicas versiones de librerías de Python, o con el mismo Python, sin interferir sobre los demás proyectos.</p>
+<p>El principal uso de estos entornos se basa en la separación de distintos proyectos y evitar así problemas de compatibilidad y de dependencias de paquetes a lo largo del desarrollo de productos.</p>
+<p>El uso de estas herramientas no se evidencia a simple vista, y solo tiene sentido práctico si se tienen diferentes proyectos en la misma máquina. Por ejemplo, la ejecución de un script que hace uso de Python 2.8 puede dificultar a posteriori el uso de proyectos con Python 3.8, o ciertas librerías necesitan una versión específica para correr de la forma que están programadas debido a que cambian el nombre de funciones, o por obsolencia de ciertas características.</p>
+<p>Es aquí que los entornos virtuales nos dejan crear ambientes separados para cada proyecto, donde especificamos tanto la versión de Python como los de los paquetes a usar, sin que ello tenga repercusiones en los demás entornos creados o usados.</p>
+<p>Dentro de estos entornos, los más populares para Python son:</p>
+<ol class="simple">
+<li><p>Virtualenv</p></li>
+<li><p>Conda</p></li>
+<li><p>pipenv</p></li>
+<li><p>venv</p></li>
+</ol>
+<p>Conda es popular entre la comunidad científica y de datos, mientras que pipenv entre los ingenieros de software.</p>
+<section id="el-entorno-conda-y-su-uso-dentro-de-la-distribucion-anaconda">
+<h2>El entorno conda y su uso dentro de la distribución Anaconda<a class="headerlink" href="#el-entorno-conda-y-su-uso-dentro-de-la-distribucion-anaconda" title="Permalink to this headline">#</a></h2>
+<p>Before we dive into learning commands for managing virtual environments, it may be helpful to familiarise with a few common terms regarding Conda.</p>
+<p>1.1. Conda vs Miniconda vs Anaconda
+Conda is a language-agnostic tool for package management and environment management. As a package manager, Conda can install, update and remove packages. As an environment manager, it can manage virtual environments.</p>
+<p>Anaconda is the most popular Python distribution (i.e way of distributing Python to end users like you and me). By installing Anaconda, you get Miniconda, Anaconda Navigator (i.e. a graphical user interface) and curated selection of packages installed.</p>
+<p>Miniconda is a mini-scale version of Anaconda. It is also a Python distribution. By installing Miniconda, you get Conda, Python and a small number of packages installed.</p>
+<p>As we can see, Conda is included in both Anaconda and Miniconda.</p>
+<img alt="../_images/conda-vs-miniconda-vs-anaconda.png" class="align-center" src="../_images/conda-vs-miniconda-vs-anaconda.png" />
+<p>https://uoa-eresearch.github.io/eresearch-cookbook/recipe/2014/11/20/conda/
+https://towardsdatascience.com/introduction-to-conda-virtual-environments-eaea4ac84e28</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -425,6 +438,13 @@ title="Print to PDF"
             <p class="prev-next-subtitle">previous</p>
             <p class="prev-next-title">Distribución Anaconda</p>
         </div>
+    </a>
+    <a class='right-next' id="next-link" href="1e_jupyter.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Jupyter Notebook</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
     </a>
 </div>
             </footer>

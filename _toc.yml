@@ -10,4 +10,9 @@ parts:
   - file: docs/1a_python_que_es
   - file: docs/1b_python_caracteristicas
   - file: docs/1c_anaconda
-  - file: docs/1d_jupyter
+  - file: docs/1d_environments
+  - file: docs/1e_jupyter
+  - file: docs/1f_jupyter_notebook
+- caption: 2 - Datos vectoriales
+  chapters:
+  - file: docs/2a_datos_vectoriales

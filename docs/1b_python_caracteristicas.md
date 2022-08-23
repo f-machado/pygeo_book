@@ -11,22 +11,17 @@ Una de las características de Python es su elegante y sintética sintaxis, hech
 Diversas características como iteradores, generador, decoradores y compresiones de lista (list comprehensions) hacen a Python un lenguaje altamente expresivo, permitiendo realizar tareas y procesos complejos en pocas líneas de código. 
 
 
-[Namespaces](https://en.wikipedia.org/wiki/Namespace) improve
-productivity by cutting down on bugs and syntax errors.
 
 ### Programación científica
 
+Python se ha convertido en un lenguaje de programación útil y dominante en ciertas áreas, tales como:
 
-Python has become one of the core languages of scientific computing.
-
-It\'s either the dominant player or a major player in
-
--   [machine learning and data science](http://scikit-learn.org/stable/)
--   [astronomy](http://www.astropy.org/)
--   [artificial intelligence](https://wiki.python.org/moin/PythonForArtificialIntelligence)
--   [chemistry](http://chemlab.github.io/chemlab/)
--   [computational biology](http://biopython.org/wiki/Main_Page)
--   [meteorology](https://pypi.org/project/meteorology/)
+-   [machine learning y data science](http://scikit-learn.org/stable/)
+-   [astronomía](http://www.astropy.org/)
+-   [inteligencia artificial](https://wiki.python.org/moin/PythonForArtificialIntelligence)
+-   [química](http://chemlab.github.io/chemlab/)
+-   [biología computacional](http://biopython.org/wiki/Main_Page)
+-   [meteorología](https://pypi.org/project/meteorology/)
 
 Its popularity in economics is also beginning to rise.
 
