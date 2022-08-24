@@ -19,16 +19,16 @@ Conda es popular entre la comunidad científica y de datos, mientras que pipenv 
 
 ### El entorno conda y su uso dentro de la distribución Anaconda
 
-Before we dive into learning commands for managing virtual environments, it may be helpful to familiarise with a few common terms regarding Conda.
+Antes de entrar a los comando usados para manejar los entornos virtuales, hablaremos sobres ciertos términos y conceptos para dejar en claro las diferencias, por ejemplo, entre Conda, Miniconda y Anaconda. 
 
- 1.1. Conda vs Miniconda vs Anaconda
-Conda is a language-agnostic tool for package management and environment management. As a package manager, Conda can install, update and remove packages. As an environment manager, it can manage virtual environments.
 
-Anaconda is the most popular Python distribution (i.e way of distributing Python to end users like you and me). By installing Anaconda, you get Miniconda, Anaconda Navigator (i.e. a graphical user interface) and curated selection of packages installed.
+**Conda**  es una herramienta agnóstica, es decir que es independiente del lenguaje de programación utilizado, para el manejo de paquetes (Conda puede instalar, actualizar y eliminar paquetes ) y de entorno virtuales. 
 
-Miniconda is a mini-scale version of Anaconda. It is also a Python distribution. By installing Miniconda, you get Conda, Python and a small number of packages installed.
+**Anaconda** es la distribución de Python más popular para usuarios finales. Al instalar Anaconda, se obtiene Miniconda, Anaconda Navigator (una interfaz gráfica de usuario) y una selección de paquetes instalados. 
 
-As we can see, Conda is included in both Anaconda and Miniconda.
+**Miniconda** es una versión reducida de Anaconda, que al mismo tiempo es una distribución de Python. Al instalar Miniconda, se obtiene Conda, Python and y un número más chico de paquetes instalados.
+
+Como podemos ver en la imagen, Conda está incluido en ambos Anaconda y Miniconda.
 
 
 <img src="../images/conda-vs-miniconda-vs-anaconda.png" class="align-center"/>
@@ -36,3 +36,8 @@ As we can see, Conda is included in both Anaconda and Miniconda.
 
 https://uoa-eresearch.github.io/eresearch-cookbook/recipe/2014/11/20/conda/
 https://towardsdatascience.com/introduction-to-conda-virtual-environments-eaea4ac84e28
+
+
+### Creacion de un environment
+
+With conda, you can create, export, list, remove, and update environments that have different versions of Python and/or packages installed in them. Switching or moving between environments is called activating the environment. You can also share an environment file.
