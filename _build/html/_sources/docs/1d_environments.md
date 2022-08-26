@@ -33,29 +33,100 @@ Como podemos ver en la imagen, Conda está incluido en ambos Anaconda y Minicond
 
 <img src="../images/conda-vs-miniconda-vs-anaconda.png" class="align-center"/>
 
+Fuentes:
 
-https://uoa-eresearch.github.io/eresearch-cookbook/recipe/2014/11/20/conda/
-https://towardsdatascience.com/introduction-to-conda-virtual-environments-eaea4ac84e28
+[https://uoa-eresearch.github.io/eresearch-cookbook/recipe/2014/11/20/conda/](https://uoa-eresearch.github.io/eresearch-cookbook/recipe/2014/11/20/conda/)
+[https://towardsdatascience.com/introduction-to-conda-virtual-environments-eaea4ac84e28](https://towardsdatascience.com/introduction-to-conda-virtual-environments-eaea4ac84e28)
+
 
 
 ## Comandos conda para manejar entornos virtuales
 
-Con conda se pueden crear, listar, exportar, eliminar y actualizar los entornos virtuales. Cambiar o moverse entre ellos se denomina *activar* el entorno. Para ello debemos abrir una terminal  (`Anaconda Prompt` en Windows), y ejecutar los siguientes comandos:
+Con conda se pueden crear, activar, listar, exportar, eliminar y actualizar los entornos virtuales. Cambiar o moverse entre ellos se denomina *activar* el entorno. 
+
+Para estas acciones debemos abrir una terminal  (`Anaconda Prompt` en Windows), y ejecutar los siguientes comandos:
 
 ### Crear un entorno virtual
 
-`conda update anaconda`
+
+`conda create -n [nombre del entorno] [Opc: version de python o R]`
+
+Cuando creamos un entorno Conda podemos especificar la versión de Python que querramos utilizar. Si no especificicamos que versión de Python usar, el entorno usará la misma versión de Python que el Python base isntalado. Para saber a que versión corresponde, podemos correr el comando `python --version`.
+
+- Ejemplos:
+
+`conda create -n que_emocion_mi_primer_entorno`
+
+`conda create -n que_emocion_mi_primer_entorno_pero_en_2_7 python = 2.7`
+
+### Activar un entorno virtual
+
+`conda activate [nombre del entorno]`
+
+- Ejemplos:
+
+`conda activate que_emocion_mi_primer_entorno`
+
+`conda activate que_emocion_mi_primer_entorno_pero_en_2_7`
 
 ### Listar los entornos virtuales
 
+`conda info --envs`
+
 ### Exportar un entorno virtual 
+
+`conda env export > [archivo yml]`
+
+- Ejemplo:
+
+`conda env export > entorno_a_exportar.yml`
+
+### Importar un entorno virtual 
+
+`conda env create -f [archivo yml]`
+
+- Ejemplo:
+
+`conda env create -f entorno_a_exportar.yml`
 
 ### Eliminar un entorno virtual 
 
+`conda env remove -n [nombre del entorno]`
+
+- Ejemplo:
+
+`conda env remove -n que_emocion_mi_primer_entorno`
+
+
 ### Instalar paquetes en un entorno virtual
  
- `conda install -c [canal] [paquete]`
+ `conda install -c [canal] [paquete (Opcional = versión)]`
 
-Ejemplo:
+- Ejemplo:
 
   `conda install -c conda-forge rasterio`
+  `conda install -c anaconda scipy = 0.17.3`
+
+La siguiente tabla ejemplifica las diferentes formas de instalar versiones de paquetes:
+
+<img src="../images/packages_versions.png" class="align-center"/>
+
+
+
+Instalar paquetes uno a la vez puede llevar a conflictos de dependencias. La documentación oficial de Conda recomienda instalar todos los paquetes al mismo tiempo para que los conflictos por dependencias se resuelvan automáticamente:
+
+- Ejemplo:
+
+ `conda install "numpy>=1.11" nltk==3.6.2 jupyter`
+
+
+### Machete de comandos Conda
+
+[https://docs.conda.io/projects/conda/en/4.6.0/_downloads/52a95608c49671267e40c689e0bc00ca/conda-cheatsheet.pdf](https://docs.conda.io/projects/conda/en/4.6.0/_downloads/52a95608c49671267e40c689e0bc00ca/conda-cheatsheet.pdf)
+
+
+
+  Fuentes:
+
+[https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html)
+[https://towardsdatascience.com/introduction-to-conda-virtual-environments-eaea4ac84e28](https://towardsdatascience.com/introduction-to-conda-virtual-environments-eaea4ac84e28)

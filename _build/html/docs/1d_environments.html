@@ -361,6 +361,11 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#activar-un-entorno-virtual">
+     Activar un entorno virtual
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#listar-los-entornos-virtuales">
      Listar los entornos virtuales
     </a>
@@ -371,6 +376,11 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#importar-un-entorno-virtual">
+     Importar un entorno virtual
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#eliminar-un-entorno-virtual">
      Eliminar un entorno virtual
     </a>
@@ -378,6 +388,11 @@ title="Print to PDF"
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#instalar-paquetes-en-un-entorno-virtual">
      Instalar paquetes en un entorno virtual
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#machete-de-comandos-conda">
+     Machete de comandos Conda
     </a>
    </li>
   </ul>
@@ -424,6 +439,11 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#activar-un-entorno-virtual">
+     Activar un entorno virtual
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#listar-los-entornos-virtuales">
      Listar los entornos virtuales
     </a>
@@ -434,6 +454,11 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#importar-un-entorno-virtual">
+     Importar un entorno virtual
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#eliminar-un-entorno-virtual">
      Eliminar un entorno virtual
     </a>
@@ -441,6 +466,11 @@ title="Print to PDF"
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#instalar-paquetes-en-un-entorno-virtual">
      Instalar paquetes en un entorno virtual
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#machete-de-comandos-conda">
+     Machete de comandos Conda
     </a>
    </li>
   </ul>
@@ -477,31 +507,85 @@ title="Print to PDF"
 <p><strong>Miniconda</strong> es una versión reducida de Anaconda, que al mismo tiempo es una distribución de Python. Al instalar Miniconda, se obtiene Conda, Python and y un número más chico de paquetes instalados.</p>
 <p>Como podemos ver en la imagen, Conda está incluido en ambos Anaconda y Miniconda.</p>
 <img alt="../_images/conda-vs-miniconda-vs-anaconda.png" class="align-center" src="../_images/conda-vs-miniconda-vs-anaconda.png" />
-<p>https://uoa-eresearch.github.io/eresearch-cookbook/recipe/2014/11/20/conda/
-https://towardsdatascience.com/introduction-to-conda-virtual-environments-eaea4ac84e28</p>
+<p>Fuentes:</p>
+<p><a class="reference external" href="https://uoa-eresearch.github.io/eresearch-cookbook/recipe/2014/11/20/conda/">https://uoa-eresearch.github.io/eresearch-cookbook/recipe/2014/11/20/conda/</a>
+<a class="reference external" href="https://towardsdatascience.com/introduction-to-conda-virtual-environments-eaea4ac84e28">https://towardsdatascience.com/introduction-to-conda-virtual-environments-eaea4ac84e28</a></p>
 </section>
 </section>
 <section id="comandos-conda-para-manejar-entornos-virtuales">
 <h1>Comandos conda para manejar entornos virtuales<a class="headerlink" href="#comandos-conda-para-manejar-entornos-virtuales" title="Permalink to this headline">#</a></h1>
-<p>Con conda se pueden crear, listar, exportar, eliminar y actualizar los entornos virtuales. Cambiar o moverse entre ellos se denomina <em>activar</em> el entorno. Para ello debemos abrir una terminal  (<code class="docutils literal notranslate"><span class="pre">Anaconda</span> <span class="pre">Prompt</span></code> en Windows), y ejecutar los siguientes comandos:</p>
+<p>Con conda se pueden crear, activar, listar, exportar, eliminar y actualizar los entornos virtuales. Cambiar o moverse entre ellos se denomina <em>activar</em> el entorno.</p>
+<p>Para estas acciones debemos abrir una terminal  (<code class="docutils literal notranslate"><span class="pre">Anaconda</span> <span class="pre">Prompt</span></code> en Windows), y ejecutar los siguientes comandos:</p>
 <section id="crear-un-entorno-virtual">
 <h2>Crear un entorno virtual<a class="headerlink" href="#crear-un-entorno-virtual" title="Permalink to this headline">#</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">update</span> <span class="pre">anaconda</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">create</span> <span class="pre">-n</span> <span class="pre">[nombre</span> <span class="pre">del</span> <span class="pre">entorno]</span> <span class="pre">[Opc:</span> <span class="pre">version</span> <span class="pre">de</span> <span class="pre">python</span> <span class="pre">o</span> <span class="pre">R]</span></code></p>
+<p>Cuando creamos un entorno Conda podemos especificar la versión de Python que querramos utilizar. Si no especificicamos que versión de Python usar, el entorno usará la misma versión de Python que el Python base isntalado. Para saber a que versión corresponde, podemos correr el comando <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">--version</span></code>.</p>
+<ul class="simple">
+<li><p>Ejemplos:</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">create</span> <span class="pre">-n</span> <span class="pre">que_emocion_mi_primer_entorno</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">create</span> <span class="pre">-n</span> <span class="pre">que_emocion_mi_primer_entorno_pero_en_2_7</span> <span class="pre">python</span> <span class="pre">=</span> <span class="pre">2.7</span></code></p>
+</section>
+<section id="activar-un-entorno-virtual">
+<h2>Activar un entorno virtual<a class="headerlink" href="#activar-un-entorno-virtual" title="Permalink to this headline">#</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span> <span class="pre">[nombre</span> <span class="pre">del</span> <span class="pre">entorno]</span></code></p>
+<ul class="simple">
+<li><p>Ejemplos:</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span> <span class="pre">que_emocion_mi_primer_entorno</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span> <span class="pre">que_emocion_mi_primer_entorno_pero_en_2_7</span></code></p>
 </section>
 <section id="listar-los-entornos-virtuales">
 <h2>Listar los entornos virtuales<a class="headerlink" href="#listar-los-entornos-virtuales" title="Permalink to this headline">#</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">info</span> <span class="pre">--envs</span></code></p>
 </section>
 <section id="exportar-un-entorno-virtual">
 <h2>Exportar un entorno virtual<a class="headerlink" href="#exportar-un-entorno-virtual" title="Permalink to this headline">#</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">env</span> <span class="pre">export</span> <span class="pre">&gt;</span> <span class="pre">[archivo</span> <span class="pre">yml]</span></code></p>
+<ul class="simple">
+<li><p>Ejemplo:</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">env</span> <span class="pre">export</span> <span class="pre">&gt;</span> <span class="pre">entorno_a_exportar.yml</span></code></p>
+</section>
+<section id="importar-un-entorno-virtual">
+<h2>Importar un entorno virtual<a class="headerlink" href="#importar-un-entorno-virtual" title="Permalink to this headline">#</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">env</span> <span class="pre">create</span> <span class="pre">-f</span> <span class="pre">[archivo</span> <span class="pre">yml]</span></code></p>
+<ul class="simple">
+<li><p>Ejemplo:</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">env</span> <span class="pre">create</span> <span class="pre">-f</span> <span class="pre">entorno_a_exportar.yml</span></code></p>
 </section>
 <section id="eliminar-un-entorno-virtual">
 <h2>Eliminar un entorno virtual<a class="headerlink" href="#eliminar-un-entorno-virtual" title="Permalink to this headline">#</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">env</span> <span class="pre">remove</span> <span class="pre">-n</span> <span class="pre">[nombre</span> <span class="pre">del</span> <span class="pre">entorno]</span></code></p>
+<ul class="simple">
+<li><p>Ejemplo:</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">env</span> <span class="pre">remove</span> <span class="pre">-n</span> <span class="pre">que_emocion_mi_primer_entorno</span></code></p>
 </section>
 <section id="instalar-paquetes-en-un-entorno-virtual">
 <h2>Instalar paquetes en un entorno virtual<a class="headerlink" href="#instalar-paquetes-en-un-entorno-virtual" title="Permalink to this headline">#</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">-c</span> <span class="pre">[canal]</span> <span class="pre">[paquete]</span></code></p>
-<p>Ejemplo:</p>
-<p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">-c</span> <span class="pre">conda-forge</span> <span class="pre">rasterio</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">-c</span> <span class="pre">[canal]</span> <span class="pre">[paquete</span> <span class="pre">(Opcional</span> <span class="pre">=</span> <span class="pre">versión)]</span></code></p>
+<ul>
+<li><p>Ejemplo:</p>
+<p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">-c</span> <span class="pre">conda-forge</span> <span class="pre">rasterio</span></code>
+<code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">-c</span> <span class="pre">anaconda</span> <span class="pre">scipy</span> <span class="pre">=</span> <span class="pre">0.17.3</span></code></p>
+</li>
+</ul>
+<p>La siguiente tabla ejemplifica las diferentes formas de instalar versiones de paquetes:</p>
+<img alt="../_images/packages_versions.png" class="align-center" src="../_images/packages_versions.png" />
+<p>Instalar paquetes uno a la vez puede llevar a conflictos de dependencias. La documentación oficial de Conda recomienda instalar todos los paquetes al mismo tiempo para que los conflictos por dependencias se resuelvan automáticamente:</p>
+<ul class="simple">
+<li><p>Ejemplo:</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">&quot;numpy&gt;=1.11&quot;</span> <span class="pre">nltk==3.6.2</span> <span class="pre">jupyter</span></code></p>
+</section>
+<section id="machete-de-comandos-conda">
+<h2>Machete de comandos Conda<a class="headerlink" href="#machete-de-comandos-conda" title="Permalink to this headline">#</a></h2>
+<p><a class="reference external" href="https://docs.conda.io/projects/conda/en/4.6.0/_downloads/52a95608c49671267e40c689e0bc00ca/conda-cheatsheet.pdf">https://docs.conda.io/projects/conda/en/4.6.0/_downloads/52a95608c49671267e40c689e0bc00ca/conda-cheatsheet.pdf</a></p>
+<p>Fuentes:</p>
+<p><a class="reference external" href="https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html">https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html</a>
+<a class="reference external" href="https://towardsdatascience.com/introduction-to-conda-virtual-environments-eaea4ac84e28">https://towardsdatascience.com/introduction-to-conda-virtual-environments-eaea4ac84e28</a></p>
 </section>
 </section>
 
