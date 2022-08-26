@@ -2,8 +2,8 @@
 # Learn more at https://jupyterbook.org/customize/config.html
 
 title: Tutorial Python para herramientas geospaciales
-author: Golden Boi
-logo: logo.png
+author: Federico Machado
+#logo: logo.png
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
