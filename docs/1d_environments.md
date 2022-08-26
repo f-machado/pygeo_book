@@ -1,4 +1,4 @@
-## Environments
+## Environments, o entornos virtuales
 
 Un *environment*, o entorno virtual, es una copia de Python que tiene como características estar aislada y operativa bajo un nombre específico. Este entorno matiene sus propios archivos, directorios y rutas de modo tal que se puede trabajar con específicas versiones de librerías de Python, o con el mismo Python, sin interferir sobre los demás proyectos. 
 
@@ -38,6 +38,66 @@ https://uoa-eresearch.github.io/eresearch-cookbook/recipe/2014/11/20/conda/
 https://towardsdatascience.com/introduction-to-conda-virtual-environments-eaea4ac84e28
 
 
-### Creacion de un environment
+## Comandos conda para manejar entornos virtuales
 
-With conda, you can create, export, list, remove, and update environments that have different versions of Python and/or packages installed in them. Switching or moving between environments is called activating the environment. You can also share an environment file.
+Con conda se pueden crear, activar, listar, exportar, eliminar y actualizar los entornos virtuales. Cambiar o moverse entre ellos se denomina *activar* el entorno. 
+
+Para estas acciones debemos abrir una terminal  (`Anaconda Prompt` en Windows), y ejecutar los siguientes comandos:
+
+### Crear un entorno virtual
+
+`conda create -n [nombre del entorno] [Opc: version de python o R]`
+
+Ejemplos:
+
+`conda create -n que_emocion_mi_primer_entorno`
+
+`conda create -n que_emocion_mi_primer_entorno_pero_en_2_7 python = 2.7`
+
+### Activar un entorno virtual
+
+`conda activate [nombre del entorno]`
+
+Ejemplos:
+
+`conda activate que_emocion_mi_primer_entorno`
+
+`conda activate que_emocion_mi_primer_entorno_pero_en_2_7`
+
+### Listar los entornos virtuales
+
+`conda info --envs`
+
+### Exportar un entorno virtual 
+
+`conda env export > [archivo yml]`
+
+Ejemplo:
+
+`conda env export > entorno_a_exportar.yml`
+
+### Importar un entorno virtual 
+
+`conda env create -f [archivo yml]`
+
+Ejemplo:
+
+`conda env create -f entorno_a_exportar.yml`
+
+### Eliminar un entorno virtual 
+
+`conda env remove -n [nombre del entorno]`
+
+Ejemplo:
+
+`conda env remove -n que_emocion_mi_primer_entorno`
+
+
+### Instalar paquetes en un entorno virtual
+ 
+ `conda install -c [canal] [paquete (Opcional = versión)]`
+
+Ejemplo:
+
+  `conda install -c conda-forge rasterio`
+  `conda install -c anaconda scipy = 0.17.3`

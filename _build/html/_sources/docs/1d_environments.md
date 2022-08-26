@@ -1,4 +1,4 @@
-## Environments
+## Environments, o entornos virtuales
 
 Un *environment*, o entorno virtual, es una copia de Python que tiene como características estar aislada y operativa bajo un nombre específico. Este entorno matiene sus propios archivos, directorios y rutas de modo tal que se puede trabajar con específicas versiones de librerías de Python, o con el mismo Python, sin interferir sobre los demás proyectos. 
 
@@ -21,13 +21,12 @@ Conda es popular entre la comunidad científica y de datos, mientras que pipenv 
 
 Antes de entrar a los comando usados para manejar los entornos virtuales, hablaremos sobres ciertos términos y conceptos para dejar en claro las diferencias, por ejemplo, entre Conda, Miniconda y Anaconda. 
 
- 1.1. Conda vs Miniconda vs Anaconda
 
-Conda  es una herramienta agnóstica, es decir que es independiente del lenguaje de programación utilizado, para el manejo de paquetes (Conda puede instalar, actualizar y eliminar paquetes ) y de entorno virtuales. 
+**Conda**  es una herramienta agnóstica, es decir que es independiente del lenguaje de programación utilizado, para el manejo de paquetes (Conda puede instalar, actualizar y eliminar paquetes ) y de entorno virtuales. 
 
-Anaconda es la distribución de Python más popular para usuarios finales. Al instalar Anaconda, se obtiene Miniconda, Anaconda Navigator (una interfaz gráfica de usuario) y una selección de paquetes instalados. 
+**Anaconda** es la distribución de Python más popular para usuarios finales. Al instalar Anaconda, se obtiene Miniconda, Anaconda Navigator (una interfaz gráfica de usuario) y una selección de paquetes instalados. 
 
-Miniconda es una versión reducida de Anaconda, que al mismo tiempo es una distribución de Python. Al instalar Miniconda, se obtiene Conda, Python and y un número más chico de paquetes instalados.
+**Miniconda** es una versión reducida de Anaconda, que al mismo tiempo es una distribución de Python. Al instalar Miniconda, se obtiene Conda, Python and y un número más chico de paquetes instalados.
 
 Como podemos ver en la imagen, Conda está incluido en ambos Anaconda y Miniconda.
 
@@ -37,3 +36,26 @@ Como podemos ver en la imagen, Conda está incluido en ambos Anaconda y Minicond
 
 https://uoa-eresearch.github.io/eresearch-cookbook/recipe/2014/11/20/conda/
 https://towardsdatascience.com/introduction-to-conda-virtual-environments-eaea4ac84e28
+
+
+## Comandos conda para manejar entornos virtuales
+
+Con conda se pueden crear, listar, exportar, eliminar y actualizar los entornos virtuales. Cambiar o moverse entre ellos se denomina *activar* el entorno. Para ello debemos abrir una terminal  (`Anaconda Prompt` en Windows), y ejecutar los siguientes comandos:
+
+### Crear un entorno virtual
+
+`conda update anaconda`
+
+### Listar los entornos virtuales
+
+### Exportar un entorno virtual 
+
+### Eliminar un entorno virtual 
+
+### Instalar paquetes en un entorno virtual
+ 
+ `conda install -c [canal] [paquete]`
+
+Ejemplo:
+
+  `conda install -c conda-forge rasterio`

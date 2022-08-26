@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Environments &#8212; Tutorial Python para herramientas geospaciales</title>
+    <title>Environments, o entornos virtuales &#8212; Tutorial Python para herramientas geospaciales</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -136,7 +136,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Environments
+   Environments, o entornos virtuales
   </a>
  </li>
  <li class="toctree-l1">
@@ -338,10 +338,49 @@ title="Print to PDF"
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#el-entorno-conda-y-su-uso-dentro-de-la-distribucion-anaconda">
-   El entorno conda y su uso dentro de la distribución Anaconda
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Environments, o entornos virtuales
   </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#el-entorno-conda-y-su-uso-dentro-de-la-distribucion-anaconda">
+     El entorno conda y su uso dentro de la distribución Anaconda
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#comandos-conda-para-manejar-entornos-virtuales">
+   Comandos conda para manejar entornos virtuales
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#crear-un-entorno-virtual">
+     Crear un entorno virtual
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#listar-los-entornos-virtuales">
+     Listar los entornos virtuales
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exportar-un-entorno-virtual">
+     Exportar un entorno virtual
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#eliminar-un-entorno-virtual">
+     Eliminar un entorno virtual
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#instalar-paquetes-en-un-entorno-virtual">
+     Instalar paquetes en un entorno virtual
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -352,7 +391,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Environments</h1>
+                <h1>Environments, o entornos virtuales</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -362,10 +401,49 @@ title="Print to PDF"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#el-entorno-conda-y-su-uso-dentro-de-la-distribucion-anaconda">
-   El entorno conda y su uso dentro de la distribución Anaconda
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Environments, o entornos virtuales
   </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#el-entorno-conda-y-su-uso-dentro-de-la-distribucion-anaconda">
+     El entorno conda y su uso dentro de la distribución Anaconda
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#comandos-conda-para-manejar-entornos-virtuales">
+   Comandos conda para manejar entornos virtuales
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#crear-un-entorno-virtual">
+     Crear un entorno virtual
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#listar-los-entornos-virtuales">
+     Listar los entornos virtuales
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exportar-un-entorno-virtual">
+     Exportar un entorno virtual
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#eliminar-un-entorno-virtual">
+     Eliminar un entorno virtual
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#instalar-paquetes-en-un-entorno-virtual">
+     Instalar paquetes en un entorno virtual
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -377,8 +455,8 @@ title="Print to PDF"
                 
               <div>
                 
-  <section id="environments">
-<h1>Environments<a class="headerlink" href="#environments" title="Permalink to this headline">#</a></h1>
+  <section id="environments-o-entornos-virtuales">
+<h1>Environments, o entornos virtuales<a class="headerlink" href="#environments-o-entornos-virtuales" title="Permalink to this headline">#</a></h1>
 <p>Un <em>environment</em>, o entorno virtual, es una copia de Python que tiene como características estar aislada y operativa bajo un nombre específico. Este entorno matiene sus propios archivos, directorios y rutas de modo tal que se puede trabajar con específicas versiones de librerías de Python, o con el mismo Python, sin interferir sobre los demás proyectos.</p>
 <p>El principal uso de estos entornos se basa en la separación de distintos proyectos y evitar así problemas de compatibilidad y de dependencias de paquetes a lo largo del desarrollo de productos.</p>
 <p>El uso de estas herramientas no se evidencia a simple vista, y solo tiene sentido práctico si se tienen diferentes proyectos en la misma máquina. Por ejemplo, la ejecución de un script que hace uso de Python 2.8 puede dificultar a posteriori el uso de proyectos con Python 3.8, o ciertas librerías necesitan una versión específica para correr de la forma que están programadas debido a que cambian el nombre de funciones, o por obsolencia de ciertas características.</p>
@@ -394,14 +472,36 @@ title="Print to PDF"
 <section id="el-entorno-conda-y-su-uso-dentro-de-la-distribucion-anaconda">
 <h2>El entorno conda y su uso dentro de la distribución Anaconda<a class="headerlink" href="#el-entorno-conda-y-su-uso-dentro-de-la-distribucion-anaconda" title="Permalink to this headline">#</a></h2>
 <p>Antes de entrar a los comando usados para manejar los entornos virtuales, hablaremos sobres ciertos términos y conceptos para dejar en claro las diferencias, por ejemplo, entre Conda, Miniconda y Anaconda.</p>
-<p>1.1. Conda vs Miniconda vs Anaconda</p>
-<p>Conda  es una herramienta agnóstica, es decir que es independiente del lenguaje de programación utilizado, para el manejo de paquetes (Conda puede instalar, actualizar y eliminar paquetes ) y de entorno virtuales.</p>
-<p>Anaconda es la distribución de Python más popular para usuarios finales. Al instalar Anaconda, se obtiene Miniconda, Anaconda Navigator (una interfaz gráfica de usuario) y una selección de paquetes instalados.</p>
-<p>Miniconda es una versión reducida de Anaconda, que al mismo tiempo es una distribución de Python. Al instalar Miniconda, se obtiene Conda, Python and y un número más chico de paquetes instalados.</p>
+<p><strong>Conda</strong>  es una herramienta agnóstica, es decir que es independiente del lenguaje de programación utilizado, para el manejo de paquetes (Conda puede instalar, actualizar y eliminar paquetes ) y de entorno virtuales.</p>
+<p><strong>Anaconda</strong> es la distribución de Python más popular para usuarios finales. Al instalar Anaconda, se obtiene Miniconda, Anaconda Navigator (una interfaz gráfica de usuario) y una selección de paquetes instalados.</p>
+<p><strong>Miniconda</strong> es una versión reducida de Anaconda, que al mismo tiempo es una distribución de Python. Al instalar Miniconda, se obtiene Conda, Python and y un número más chico de paquetes instalados.</p>
 <p>Como podemos ver en la imagen, Conda está incluido en ambos Anaconda y Miniconda.</p>
 <img alt="../_images/conda-vs-miniconda-vs-anaconda.png" class="align-center" src="../_images/conda-vs-miniconda-vs-anaconda.png" />
 <p>https://uoa-eresearch.github.io/eresearch-cookbook/recipe/2014/11/20/conda/
 https://towardsdatascience.com/introduction-to-conda-virtual-environments-eaea4ac84e28</p>
+</section>
+</section>
+<section id="comandos-conda-para-manejar-entornos-virtuales">
+<h1>Comandos conda para manejar entornos virtuales<a class="headerlink" href="#comandos-conda-para-manejar-entornos-virtuales" title="Permalink to this headline">#</a></h1>
+<p>Con conda se pueden crear, listar, exportar, eliminar y actualizar los entornos virtuales. Cambiar o moverse entre ellos se denomina <em>activar</em> el entorno. Para ello debemos abrir una terminal  (<code class="docutils literal notranslate"><span class="pre">Anaconda</span> <span class="pre">Prompt</span></code> en Windows), y ejecutar los siguientes comandos:</p>
+<section id="crear-un-entorno-virtual">
+<h2>Crear un entorno virtual<a class="headerlink" href="#crear-un-entorno-virtual" title="Permalink to this headline">#</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">update</span> <span class="pre">anaconda</span></code></p>
+</section>
+<section id="listar-los-entornos-virtuales">
+<h2>Listar los entornos virtuales<a class="headerlink" href="#listar-los-entornos-virtuales" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="exportar-un-entorno-virtual">
+<h2>Exportar un entorno virtual<a class="headerlink" href="#exportar-un-entorno-virtual" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="eliminar-un-entorno-virtual">
+<h2>Eliminar un entorno virtual<a class="headerlink" href="#eliminar-un-entorno-virtual" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="instalar-paquetes-en-un-entorno-virtual">
+<h2>Instalar paquetes en un entorno virtual<a class="headerlink" href="#instalar-paquetes-en-un-entorno-virtual" title="Permalink to this headline">#</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">-c</span> <span class="pre">[canal]</span> <span class="pre">[paquete]</span></code></p>
+<p>Ejemplo:</p>
+<p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">-c</span> <span class="pre">conda-forge</span> <span class="pre">rasterio</span></code></p>
 </section>
 </section>
 
