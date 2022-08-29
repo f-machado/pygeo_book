@@ -52,7 +52,6 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Probando notebooks" href="1f_jupyter_notebook.html" />
     <link rel="prev" title="Environments, o entornos virtuales" href="1d_environments.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -137,23 +136,6 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Jupyter Notebook
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="1f_jupyter_notebook.html">
-   Probando notebooks
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  2 - Datos vectoriales
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="2a_datos_vectoriales.html">
-   ¿Qué es Python?
   </a>
  </li>
 </ul>
@@ -311,12 +293,36 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#inicializando-jupyter-notebook">
+   Inicializando Jupyter Notebook
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -328,6 +334,19 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#inicializando-jupyter-notebook">
+   Inicializando Jupyter Notebook
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -337,6 +356,32 @@ title="Print to PDF"
                 
   <section id="jupyter-notebook">
 <h1>Jupyter Notebook<a class="headerlink" href="#jupyter-notebook" title="Permalink to this headline">#</a></h1>
+<p><span class="xref myst">Jupyter</span> es una de las muchas maneras posibles de interaccionar con Python y sus librerías científicas. Para ello hacen uso de una interfaz basado en un navegador que permiten:</p>
+<ul class="simple">
+<li><p>Escribir y ejecutar comandos de Python.</p></li>
+<li><p>Control para formatear las salidas en el navegador, incluyendo tablas, figuras, animaciones, etc.</p></li>
+<li><p>La opción de mezclar texto formaterado y expresiones matemáticas.</p></li>
+</ul>
+<p>Aunque Jupyter no es la unica manera de programar en Python (Spyder, Visual Studio Code, PyCharm), es recomendado para empezar a testear nuevas ideas, o para correr pequeños pedazos de códigos, compartir ideas científicas con estudiantes o colegas, haciendo uso del formato de salidad, que nos permite enriquecer nuestro código con explicaciones, gráficos, y otras características que ofrece este entorno.</p>
+<section id="inicializando-jupyter-notebook">
+<h2>Inicializando Jupyter Notebook<a class="headerlink" href="#inicializando-jupyter-notebook" title="Permalink to this headline">#</a></h2>
+<p>Una vez instalado Anaconda, podemos inicializar Jupyter notebook. Para ello, existen dos maneras:</p>
+<ul class="simple">
+<li><p>Mediante Anaconda Navigator, donde elegimos el entorno a trabajar y ejecutamos una Jupyter Notebook.</p></li>
+<li><p>Mediante consola (o Anaconda Prompt en Windows), donde activamos el entorno a trabajar y luego ejecutamos Jupyter Notebook mediante el comando  <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">notebook</span></code></p></li>
+</ul>
+<p>Ejemplo:</p>
+<p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span> <span class="pre">mi_entorno_a_usar</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">jupyter</span></code> (Si no lo tenemos instalado en el entorno)</p>
+<p><code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">notebook</span></code></p>
+<a class="align-center reference internal image-reference" href="../_images/open_jupyter_notebook.png"><img alt="../_images/open_jupyter_notebook.png" class="align-center" src="../_images/open_jupyter_notebook.png" style="width: 70%;" /></a>
+<p>La salida del comando nos dice que el notebook está corriendo en http://localhost:8888/, donde localhost se refiere al nobre de la maquina local, y 8888 al puerto donde el kernel de jupyter está escuchando para correr los comando de Python que se ejecuten.</p>
+<p>Además el comando nos abre el navegador seteado por defecto a una página que tiene el siguiente aspecto, llamada <em>Jupyter dashboard</em>:</p>
+<p>Una vez en el <em>dashboard</em>, nos posiciamos en la carpeta donde queremos guardar nuestra Jupyter Notebook, y hacemos click en <em>New</em> arriba a la derecha, seleccionando Python como opción.</p>
+<a class="align-center reference internal image-reference" href="../_images/create_new_jupyter.png"><img alt="../_images/create_new_jupyter.png" class="align-center" src="../_images/create_new_jupyter.png" style="width: 70%;" /></a>
+<p>La notebook que abrimos nos muestra una celda activa, donde podemos tipear comando de Python. Como ejemplo tenemos el clásico imprimir ‘Hello world’.</p>
+<a class="align-center reference internal image-reference" href="../_images/jupyter_hello_world.png"><img alt="../_images/jupyter_hello_world.png" class="align-center" src="../_images/jupyter_hello_world.png" style="width: 70%;" /></a>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -372,13 +417,6 @@ title="Print to PDF"
             <p class="prev-next-subtitle">previous</p>
             <p class="prev-next-title">Environments, o entornos virtuales</p>
         </div>
-    </a>
-    <a class='right-next' id="next-link" href="1f_jupyter_notebook.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Probando notebooks</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
     </a>
 </div>
             </footer>

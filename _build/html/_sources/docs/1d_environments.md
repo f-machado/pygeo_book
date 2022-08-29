@@ -119,6 +119,11 @@ Instalar paquetes uno a la vez puede llevar a conflictos de dependencias. La doc
 
  `conda install "numpy>=1.11" nltk==3.6.2 jupyter`
 
+### Conda channels
+
+https://towardsdatascience.com/introduction-to-conda-virtual-environments-eaea4ac84e28
+
+
 
 ### Machete de comandos Conda
 
