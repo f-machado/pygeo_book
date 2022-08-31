@@ -369,14 +369,21 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#conda-channels">
-     Conda channels
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#machete-de-comandos-conda">
      Machete de comandos Conda
     </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#canales-conda">
+     Canales Conda
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#fuentes">
+       Fuentes:
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -452,14 +459,21 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#conda-channels">
-     Conda channels
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#machete-de-comandos-conda">
      Machete de comandos Conda
     </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#canales-conda">
+     Canales Conda
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#fuentes">
+       Fuentes:
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -490,9 +504,9 @@ title="Print to PDF"
 <section id="el-entorno-conda-y-su-uso-dentro-de-la-distribucion-anaconda">
 <h2>El entorno conda y su uso dentro de la distribución Anaconda<a class="headerlink" href="#el-entorno-conda-y-su-uso-dentro-de-la-distribucion-anaconda" title="Permalink to this headline">#</a></h2>
 <p>Antes de entrar a los comando usados para manejar los entornos virtuales, hablaremos sobres ciertos términos y conceptos para dejar en claro las diferencias, por ejemplo, entre Conda, Miniconda y Anaconda.</p>
-<p><strong>Conda</strong>  es una herramienta agnóstica, es decir que es independiente del lenguaje de programación utilizado, para el manejo de paquetes (Conda puede instalar, actualizar y eliminar paquetes ) y de entorno virtuales.</p>
+<p><strong>Conda</strong>  es una herramienta agnóstica, es decir que es independiente del lenguaje de programación utilizado, para el manejo de paquetes (Conda puede instalar, actualizar y eliminar paquetes) y de entorno virtuales.</p>
 <p><strong>Anaconda</strong> es la distribución de Python más popular para usuarios finales. Al instalar Anaconda, se obtiene Miniconda, Anaconda Navigator (una interfaz gráfica de usuario) y una selección de paquetes instalados.</p>
-<p><strong>Miniconda</strong> es una versión reducida de Anaconda, que al mismo tiempo es una distribución de Python. Al instalar Miniconda, se obtiene Conda, Python and y un número más chico de paquetes instalados.</p>
+<p><strong>Miniconda</strong> es una versión reducida de Anaconda, que al mismo tiempo es una distribución de Python. Al instalar Miniconda, se obtiene Conda, Python y un número más chico de paquetes instalados.</p>
 <p>Como podemos ver en la imagen, Conda está incluido en ambos Anaconda y Miniconda.</p>
 <img alt="../_images/conda-vs-miniconda-vs-anaconda.png" class="align-center" src="../_images/conda-vs-miniconda-vs-anaconda.png" />
 <p>Fuentes:</p>
@@ -556,8 +570,8 @@ title="Print to PDF"
 <p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">-c</span> <span class="pre">[canal]</span> <span class="pre">[paquete</span> <span class="pre">(Opcional</span> <span class="pre">=</span> <span class="pre">versión)]</span></code></p>
 <ul>
 <li><p>Ejemplo:</p>
-<p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">-c</span> <span class="pre">conda-forge</span> <span class="pre">rasterio</span></code>
-<code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">-c</span> <span class="pre">anaconda</span> <span class="pre">scipy</span> <span class="pre">=</span> <span class="pre">0.17.3</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">-c</span> <span class="pre">conda-forge</span> <span class="pre">rasterio</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">-c</span> <span class="pre">anaconda</span> <span class="pre">scipy</span> <span class="pre">=</span> <span class="pre">0.17.3</span></code></p>
 </li>
 </ul>
 <p>La siguiente tabla ejemplifica las diferentes formas de instalar versiones de paquetes:</p>
@@ -568,16 +582,25 @@ title="Print to PDF"
 </ul>
 <p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">&quot;numpy&gt;=1.11&quot;</span> <span class="pre">nltk==3.6.2</span> <span class="pre">jupyter</span></code></p>
 </section>
-<section id="conda-channels">
-<h2>Conda channels<a class="headerlink" href="#conda-channels" title="Permalink to this headline">#</a></h2>
-<p>https://towardsdatascience.com/introduction-to-conda-virtual-environments-eaea4ac84e28</p>
-</section>
 <section id="machete-de-comandos-conda">
 <h2>Machete de comandos Conda<a class="headerlink" href="#machete-de-comandos-conda" title="Permalink to this headline">#</a></h2>
+<p>Dentro de la documentación oficial de Conda se encuentra un PDF con el resumen de los comandos más usados y una breve descripción:</p>
 <p><a class="reference external" href="https://docs.conda.io/projects/conda/en/4.6.0/_downloads/52a95608c49671267e40c689e0bc00ca/conda-cheatsheet.pdf">https://docs.conda.io/projects/conda/en/4.6.0/_downloads/52a95608c49671267e40c689e0bc00ca/conda-cheatsheet.pdf</a></p>
-<p>Fuentes:</p>
+</section>
+<section id="canales-conda">
+<h2>Canales Conda<a class="headerlink" href="#canales-conda" title="Permalink to this headline">#</a></h2>
+<p>https://towardsdatascience.com/introduction-to-conda-virtual-environments-eaea4ac84e28</p>
+<p>Por defecto, la instalación de paquetes que realiza conda proviene de su canal <code class="docutils literal notranslate"><span class="pre">defaults</span></code>. Sin embargo, es probable que cierto paquete requerido no se encuentre en este canal, sino en otros canales -por ejemplo el popular <code class="docutils literal notranslate"><span class="pre">conda-forge</span></code>. Para chequear cuales son los canales que se tienen agregados para la búsqueda e instalación de paquetes podemos correr el siguiente comando:</p>
+<p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">config</span> <span class="pre">--show</span> <span class="pre">channels</span></code></p>
+<p>Para agregar el canal <code class="docutils literal notranslate"><span class="pre">conda-forge</span></code>, corremos la siguiente línea de código en la terminal:</p>
+<p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">config</span> <span class="pre">--add</span> <span class="pre">channels</span> <span class="pre">conda-forge</span></code></p>
+<p>Llegado el caso que el paquete que necesitemos no se encuentre en ningún canal soportado por Conda, podemos utilizar la librería pip para instalar nuestros paquetes. Esta instalación tendría que ser nuestro último recurso, en general es buena práctica instalar e usar las herramientas de Conda para minimizar problemas de compatibilidad de paquetes:</p>
+<p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">package_name</span></code></p>
+<section id="fuentes">
+<h3>Fuentes:<a class="headerlink" href="#fuentes" title="Permalink to this headline">#</a></h3>
 <p><a class="reference external" href="https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html">https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html</a>
 <a class="reference external" href="https://towardsdatascience.com/introduction-to-conda-virtual-environments-eaea4ac84e28">https://towardsdatascience.com/introduction-to-conda-virtual-environments-eaea4ac84e28</a></p>
+</section>
 </section>
 </section>
 
