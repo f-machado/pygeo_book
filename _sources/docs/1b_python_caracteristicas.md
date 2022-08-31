@@ -1,6 +1,6 @@
 ## Características
 
-Python es un [lenguaje de alto nivel](https://es.wikipedia.org/wiki/Lenguaje_de_alto_nivel) interpretado, dinámico, multiparadigma (soporta programación procedural, orientada a objetos, funcional, etc.) y multiplataforma, que cuenta con un relativamente pequeño lenguaje *core* o central apoyads por diversas librerías.
+Python es un [lenguaje de alto nivel](https://es.wikipedia.org/wiki/Lenguaje_de_alto_nivel) interpretado, dinámico, multiparadigma (soporta programación procedural, orientada a objetos, funcional, etc.) y multiplataforma, que cuenta con un relativamente pequeño lenguaje *core* o central apoyado por diversas librerías.
 
 
 
@@ -23,6 +23,7 @@ Python se ha convertido en un lenguaje de programación útil y dominante en cie
 -   [biología computacional](http://biopython.org/wiki/Main_Page)
 -   [meteorología](https://pypi.org/project/meteorology/)
 
-Its popularity in economics is also beginning to rise.
 
-Poner referencia.
+Fuente:
+
+- [https://pygis.io/docs/b_getting_started.html#jupyter-notebooks](https://pygis.io/docs/b_getting_started.html#jupyter-notebooks)

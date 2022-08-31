@@ -22,11 +22,11 @@ Conda es popular entre la comunidad científica y de datos, mientras que pipenv 
 Antes de entrar a los comando usados para manejar los entornos virtuales, hablaremos sobres ciertos términos y conceptos para dejar en claro las diferencias, por ejemplo, entre Conda, Miniconda y Anaconda. 
 
 
-**Conda**  es una herramienta agnóstica, es decir que es independiente del lenguaje de programación utilizado, para el manejo de paquetes (Conda puede instalar, actualizar y eliminar paquetes ) y de entorno virtuales. 
+**Conda**  es una herramienta agnóstica, es decir que es independiente del lenguaje de programación utilizado, para el manejo de paquetes (Conda puede instalar, actualizar y eliminar paquetes) y de entorno virtuales. 
 
 **Anaconda** es la distribución de Python más popular para usuarios finales. Al instalar Anaconda, se obtiene Miniconda, Anaconda Navigator (una interfaz gráfica de usuario) y una selección de paquetes instalados. 
 
-**Miniconda** es una versión reducida de Anaconda, que al mismo tiempo es una distribución de Python. Al instalar Miniconda, se obtiene Conda, Python and y un número más chico de paquetes instalados.
+**Miniconda** es una versión reducida de Anaconda, que al mismo tiempo es una distribución de Python. Al instalar Miniconda, se obtiene Conda, Python y un número más chico de paquetes instalados.
 
 Como podemos ver en la imagen, Conda está incluido en ambos Anaconda y Miniconda.
 
@@ -105,6 +105,7 @@ Cuando creamos un entorno Conda podemos especificar la versión de Python que qu
 - Ejemplo:
 
   `conda install -c conda-forge rasterio`
+
   `conda install -c anaconda scipy = 0.17.3`
 
 La siguiente tabla ejemplifica las diferentes formas de instalar versiones de paquetes:
@@ -119,19 +120,30 @@ Instalar paquetes uno a la vez puede llevar a conflictos de dependencias. La doc
 
  `conda install "numpy>=1.11" nltk==3.6.2 jupyter`
 
-### Conda channels
+ ### Machete de comandos Conda
 
-https://towardsdatascience.com/introduction-to-conda-virtual-environments-eaea4ac84e28
-
-
-
-### Machete de comandos Conda
+Dentro de la documentación oficial de Conda se encuentra un PDF con el resumen de los comandos más usados y una breve descripción:
 
 [https://docs.conda.io/projects/conda/en/4.6.0/_downloads/52a95608c49671267e40c689e0bc00ca/conda-cheatsheet.pdf](https://docs.conda.io/projects/conda/en/4.6.0/_downloads/52a95608c49671267e40c689e0bc00ca/conda-cheatsheet.pdf)
 
+### Canales Conda
+
+https://towardsdatascience.com/introduction-to-conda-virtual-environments-eaea4ac84e28
+
+Por defecto, la instalación de paquetes que realiza conda proviene de su canal `defaults`. Sin embargo, es probable que cierto paquete requerido no se encuentre en este canal, sino en otros canales -por ejemplo el popular `conda-forge`. Para chequear cuales son los canales que se tienen agregados para la búsqueda e instalación de paquetes podemos correr el siguiente comando:
+
+`conda config --show channels`
+
+Para agregar el canal `conda-forge`, corremos la siguiente línea de código en la terminal:
+
+`conda config --add channels conda-forge`
+
+Llegado el caso que el paquete que necesitemos no se encuentre en ningún canal soportado por Conda, podemos utilizar la librería pip para instalar nuestros paquetes. Esta instalación tendría que ser nuestro último recurso, en general es buena práctica instalar e usar las herramientas de Conda para minimizar problemas de compatibilidad de paquetes:
+
+`pip install package_name`
 
 
-  Fuentes:
+#### Fuentes:
 
 [https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html)
 [https://towardsdatascience.com/introduction-to-conda-virtual-environments-eaea4ac84e28](https://towardsdatascience.com/introduction-to-conda-virtual-environments-eaea4ac84e28)
