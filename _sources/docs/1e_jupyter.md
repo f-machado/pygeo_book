@@ -25,7 +25,9 @@ Ejemplo:
 
  `jupyter notebook`
 
-<img src="../images/open_jupyter_notebook.png" class="align-center" width=70%>
+<img src="../images/open_jupyter_notebook.png" class="align-center">
+
+<img src="../images/open_jupyter_notebook_2.png" class="align-center">
 
 
 La salida del comando nos dice que el notebook está corriendo en http://localhost:8888/, donde localhost se refiere al nobre de la maquina local, y 8888 al puerto donde el kernel de jupyter está escuchando para correr los comando de Python que se ejecuten. 
@@ -34,14 +36,36 @@ Además el comando nos abre el navegador seteado por defecto a una página que t
 
 Una vez en el *dashboard*, nos posiciamos en la carpeta donde queremos guardar nuestra Jupyter Notebook, y hacemos click en *New* arriba a la derecha, seleccionando Python como opción. 
 
-<img src="../images/create_new_jupyter.png" class="align-center" width=70%>
+<img src="../images/create_new_jupyter.png" class="align-center" >
 
 
-La notebook que abrimos nos muestra una celda activa, donde podemos tipear comando de Python. Como ejemplo tenemos el clásico imprimir 'Hello world'.
+&nbsp;
+
+La notebook que abrimos nos muestra una celda activa, donde podemos tipear comando de Python. Como ejemplo tenemos el clásico imprimir `Hello world`.
 
 
-<img src="../images/jupyter_hello_world.png" class="align-center" width=70%>
+<img src="../images/jupyter_hello_world.png" class="align-center">
 
 
 
+### Modos de edición
 
+Las Jupyter notebook usan un sistema de edición que pueden permutar entre dos modos:
+
+- Modo de edición, permite la edición en formato Markdown que nos habilita a escribir texto, adjuntar imágenes, videos, escribir en modo matemático, agregar símbolos Unicode.
+
+- Modo de comandos, permite la ejecución de comandos de Python por celdas. 
+
+### Correr una celda
+
+Cuando una celda se encuentra en el modo de comando, la celda puede ser ejecutado usando `Shift-Enter`, o apretando el botón `Run`. En los menús contextuales aparecen diversas opciones para correr nuestras celdas.
+
+### Compartir Notebooks
+
+Los archivos Notebook son simplemente archivos de texto estructurados en JSON, con la extensión .ipynb. Estos archivos puede compartirse como un archivo más, o a través de servicios web como `nbviewer`.
+
+Por ejemplo, las páginas siguientes de Jupyter Book pueden ser descargadas como un archivo .ipynb y luego abiertas y ejecutadas mediante el uso local de Jupyter Notebook.
+
+Fuentes:
+
+- [https://pygis.io/docs/b_getting_started.html#jupyter-notebooks](https://pygis.io/docs/b_getting_started.html#jupyter-notebooks)

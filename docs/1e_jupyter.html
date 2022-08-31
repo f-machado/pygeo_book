@@ -320,6 +320,21 @@ title="Print to PDF"
    Inicializando Jupyter Notebook
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#modos-de-edicion">
+   Modos de edición
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#correr-una-celda">
+   Correr una celda
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#compartir-notebooks">
+   Compartir Notebooks
+  </a>
+ </li>
 </ul>
 
     </nav>
@@ -342,6 +357,21 @@ title="Print to PDF"
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#inicializando-jupyter-notebook">
    Inicializando Jupyter Notebook
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#modos-de-edicion">
+   Modos de edición
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#correr-una-celda">
+   Correr una celda
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#compartir-notebooks">
+   Compartir Notebooks
   </a>
  </li>
 </ul>
@@ -374,13 +404,36 @@ title="Print to PDF"
 <p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span> <span class="pre">mi_entorno_a_usar</span></code></p>
 <p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">jupyter</span></code> (Si no lo tenemos instalado en el entorno)</p>
 <p><code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">notebook</span></code></p>
-<a class="align-center reference internal image-reference" href="../_images/open_jupyter_notebook.png"><img alt="../_images/open_jupyter_notebook.png" class="align-center" src="../_images/open_jupyter_notebook.png" style="width: 70%;" /></a>
+<img alt="../_images/open_jupyter_notebook.png" class="align-center" src="../_images/open_jupyter_notebook.png" />
+<img alt="../_images/open_jupyter_notebook_2.png" class="align-center" src="../_images/open_jupyter_notebook_2.png" />
 <p>La salida del comando nos dice que el notebook está corriendo en http://localhost:8888/, donde localhost se refiere al nobre de la maquina local, y 8888 al puerto donde el kernel de jupyter está escuchando para correr los comando de Python que se ejecuten.</p>
 <p>Además el comando nos abre el navegador seteado por defecto a una página que tiene el siguiente aspecto, llamada <em>Jupyter dashboard</em>:</p>
 <p>Una vez en el <em>dashboard</em>, nos posiciamos en la carpeta donde queremos guardar nuestra Jupyter Notebook, y hacemos click en <em>New</em> arriba a la derecha, seleccionando Python como opción.</p>
-<a class="align-center reference internal image-reference" href="../_images/create_new_jupyter.png"><img alt="../_images/create_new_jupyter.png" class="align-center" src="../_images/create_new_jupyter.png" style="width: 70%;" /></a>
-<p>La notebook que abrimos nos muestra una celda activa, donde podemos tipear comando de Python. Como ejemplo tenemos el clásico imprimir ‘Hello world’.</p>
-<a class="align-center reference internal image-reference" href="../_images/jupyter_hello_world.png"><img alt="../_images/jupyter_hello_world.png" class="align-center" src="../_images/jupyter_hello_world.png" style="width: 70%;" /></a>
+<img alt="../_images/create_new_jupyter.png" class="align-center" src="../_images/create_new_jupyter.png" />
+<p> </p>
+<p>La notebook que abrimos nos muestra una celda activa, donde podemos tipear comando de Python. Como ejemplo tenemos el clásico imprimir <code class="docutils literal notranslate"><span class="pre">Hello</span> <span class="pre">world</span></code>.</p>
+<img alt="../_images/jupyter_hello_world.png" class="align-center" src="../_images/jupyter_hello_world.png" />
+</section>
+<section id="modos-de-edicion">
+<h2>Modos de edición<a class="headerlink" href="#modos-de-edicion" title="Permalink to this headline">#</a></h2>
+<p>Las Jupyter notebook usan un sistema de edición que pueden permutar entre dos modos:</p>
+<ul class="simple">
+<li><p>Modo de edición, permite la edición en formato Markdown que nos habilita a escribir texto, adjuntar imágenes, videos, escribir en modo matemático, agregar símbolos Unicode.</p></li>
+<li><p>Modo de comandos, permite la ejecución de comandos de Python por celdas.</p></li>
+</ul>
+</section>
+<section id="correr-una-celda">
+<h2>Correr una celda<a class="headerlink" href="#correr-una-celda" title="Permalink to this headline">#</a></h2>
+<p>Cuando una celda se encuentra en el modo de comando, la celda puede ser ejecutado usando <code class="docutils literal notranslate"><span class="pre">Shift-Enter</span></code>, o apretando el botón <code class="docutils literal notranslate"><span class="pre">Run</span></code>. En los menús contextuales aparecen diversas opciones para correr nuestras celdas.</p>
+</section>
+<section id="compartir-notebooks">
+<h2>Compartir Notebooks<a class="headerlink" href="#compartir-notebooks" title="Permalink to this headline">#</a></h2>
+<p>Los archivos Notebook son simplemente archivos de texto estructurados en JSON, con la extensión .ipynb. Estos archivos puede compartirse como un archivo más, o a través de servicios web como <code class="docutils literal notranslate"><span class="pre">nbviewer</span></code>.</p>
+<p>Por ejemplo, las páginas siguientes de Jupyter Book pueden ser descargadas como un archivo .ipynb y luego abiertas y ejecutadas mediante el uso local de Jupyter Notebook.</p>
+<p>Fuentes:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://pygis.io/docs/b_getting_started.html#jupyter-notebooks">https://pygis.io/docs/b_getting_started.html#jupyter-notebooks</a></p></li>
+</ul>
 </section>
 </section>
 
