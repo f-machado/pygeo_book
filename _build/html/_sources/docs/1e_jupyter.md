@@ -30,7 +30,7 @@ Ejemplo:
 <img src="../images/open_jupyter_notebook_2.png" class="align-center">
 
 
-La salida del comando nos dice que el notebook está corriendo en http://localhost:8888/, donde localhost se refiere al nobre de la maquina local, y 8888 al puerto donde el kernel de jupyter está escuchando para correr los comando de Python que se ejecuten. 
+La salida del comando nos dice que el notebook está corriendo en http://localhost:8888/, donde localhost se refiere al nombre de la maquina local, y 8888 al puerto donde el kernel de jupyter está escuchando para correr los comando de Python que se ejecuten. 
 
 Además el comando nos abre el navegador seteado por defecto a una página que tiene el siguiente aspecto, llamada *Jupyter dashboard*:
 

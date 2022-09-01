@@ -2,7 +2,7 @@
 # Learn more at https://jupyterbook.org/customize/config.html
 
 title: Tutorial Python para herramientas geospaciales
-author: Federico Machado
+author: Federico Machado y Mauro López Gregori
 #logo: logo.png
 
 # Force re-execution of notebooks on each build.
