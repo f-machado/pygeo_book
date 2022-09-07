@@ -52,6 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Colecciones - Listas, tuplas, sets y diccionarios." href="2c_secuencias.html" />
     <link rel="prev" title="Python científico" href="2a_python_cientifico.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -153,6 +154,11 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Variables
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2c_secuencias.html">
+   Colecciones - Listas, tuplas, sets y diccionarios.
   </a>
  </li>
 </ul>
@@ -366,6 +372,28 @@ title="Print to PDF"
    Tipos de variables
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conversion-entre-tipos-de-datos">
+   Conversión entre tipos de datos
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#error-al-sumar-una-variable-string-con-un-variable-int">
+     Error al sumar una variable string con un variable int
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#conversion-de-string-a-int-para-permitir-la-operacion-de-suma">
+     Conversión de string a int para permitir la operación de suma
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#variables-reservadas">
+   Variables reservadas
+  </a>
+ </li>
 </ul>
 
     </nav>
@@ -388,6 +416,28 @@ title="Print to PDF"
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#tipos-de-variables">
    Tipos de variables
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conversion-entre-tipos-de-datos">
+   Conversión entre tipos de datos
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#error-al-sumar-una-variable-string-con-un-variable-int">
+     Error al sumar una variable string con un variable int
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#conversion-de-string-a-int-para-permitir-la-operacion-de-suma">
+     Conversión de string a int para permitir la operación de suma
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#variables-reservadas">
+   Variables reservadas
   </a>
  </li>
 </ul>
@@ -434,11 +484,11 @@ Es a igual a A?:  False
 </div>
 <p>Es importante como buena práctica de programación asignar variables con nombres descriptivos para dejar en claro para que son usadas. Hay distintas convenciones sobre como dar estilo a las variables, por ejemplo:</p>
 <ul class="simple">
-<li><p>Estilo Camello: La segunda y subsiguientes palabras son capitalizadas, para hacer mas legible la variable.
+<li><p><code class="docutils literal notranslate"><span class="pre">Estilo</span> <span class="pre">Camello</span></code>: La segunda y subsiguientes palabras son capitalizadas, para hacer mas legible la variable.
 Ejemplo: nombreLoteAMuestrear</p></li>
-<li><p>Estilo Pascal: Idéntico al caso anterior, pero con la primer palabra capitalizada.
+<li><p><code class="docutils literal notranslate"><span class="pre">Estilo</span> <span class="pre">Pascal</span></code>: Idéntico al caso anterior, pero con la primer palabra capitalizada.
 Ejemplo: NombreLoteAMuestrear</p></li>
-<li><p>Estilo Serpiente: Las palabras son separadas por guiones bajos.
+<li><p><code class="docutils literal notranslate"><span class="pre">Estilo</span> <span class="pre">Serpiente</span></code>: Las palabras son separadas por guiones bajos.
 Ejemplo: nombre_lote_a_muestrear</p></li>
 </ul>
 <p>La guía de estilo para código en Python, también conocida como <a class="reference external" href="https://peps.python.org/pep-0008/">PEP 8</a>, contiene una sección de Convenciones de nombramiento que sugiere estándares para nombrar diferentes tipos de objetos. Por ejemplo, recomienda:</p>
@@ -451,25 +501,25 @@ Ejemplo: nombre_lote_a_muestrear</p></li>
 <h2>Tipos de variables<a class="headerlink" href="#tipos-de-variables" title="Permalink to this headline">#</a></h2>
 <p>Existen diversos tipos de datos básicos en Python.</p>
 <ul class="simple">
-<li><p>Número Entero (int)</p></li>
+<li><p>Número Entero (<code class="docutils literal notranslate"><span class="pre">int</span></code>)</p></li>
 </ul>
 <p>Este tipo de dato se corresponde con números enteros, es decir, sin parte decimal.</p>
 <ul class="simple">
-<li><p>Número Decimal (float)</p></li>
+<li><p>Número Decimal (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
 </ul>
 <p>Este tipo de dato se corresponde con números reales con parte decimal. Cabe destacar que el separador decimal en Python es el punto (.) y no la coma (,).</p>
 <ul class="simple">
-<li><p>Caracter (chr)</p></li>
+<li><p>Caracter (<code class="docutils literal notranslate"><span class="pre">chr</span></code>)</p></li>
 </ul>
 <p>Este tipo de dato se corresponde con un símbolo tipográfico, es decir, una letra, número, coma, espacio, signo de punutación, etc.</p>
 <ul class="simple">
-<li><p>Cadena de Texto (str)</p></li>
+<li><p>Cadena de Texto (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 </ul>
 <p>Este tipo de datos se corresponde con una cadena de caracteres.</p>
 <ul class="simple">
-<li><p>Booleano (bool)</p></li>
+<li><p>Booleano (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
 </ul>
-<p>Este tipo de dato reconoce solamente dos valores: Verdadero (True) y Falso (False)</p>
+<p>Este tipo de dato reconoce solamente dos valores: Verdadero (<code class="docutils literal notranslate"><span class="pre">True</span></code>) y Falso (<code class="docutils literal notranslate"><span class="pre">False</span></code>)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;El valor de a es:&#39;</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span> 
@@ -508,13 +558,104 @@ El tipo de variable de yrupe es: &lt;class &#39;float&#39;&gt;
 </div>
 </div>
 </div>
-<p>En muchos lenguasjes de progrmación las variables son estáticas con respecto al tipo con las fueron construídas. Sin embargo Python nos ofrece la posibilidad de reasignar el tipo de dato de una variable, cuestión útil para pasar números flotantes a enteros, números en general a caracteres, etc.</p>
+</section>
+<section id="conversion-entre-tipos-de-datos">
+<h2>Conversión entre tipos de datos<a class="headerlink" href="#conversion-entre-tipos-de-datos" title="Permalink to this headline">#</a></h2>
+<p>En muchos lenguajes de programación las variables son estáticas con respecto al tipo con las fueron construídas. Sin embargo Python nos ofrece la posibilidad de reasignar el tipo de dato de una variable, cuestión útil para pasar números flotantes a enteros, números en general a caracteres, etc.</p>
 <p>Para ello, Python ofrece las siguientes funciones:</p>
 <ul class="simple">
-<li><p>str(): Devuelve la representación en cadena de caracteres del objeto que se pasa como parámetro.</p></li>
-<li><p>int(): Devuelve un int a partir de un número o secuencia de caracteres.</p></li>
-<li><p>float(): Devuelve un float a partir de un número o secuencia de caracteres.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">str()</span></code>: Devuelve la representación en cadena de caracteres del objeto que se pasa como parámetro.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">int()</span></code>: Devuelve un int a partir de un número o secuencia de caracteres.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">float()</span></code>: Devuelve un float a partir de un número o secuencia de caracteres.</p></li>
 </ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">entero</span> <span class="o">=</span> <span class="mi">33</span>
+<span class="n">decimal</span> <span class="o">=</span> <span class="mf">2.8182</span>
+<span class="n">caracter</span> <span class="o">=</span> <span class="s1">&#39;F&#39;</span>
+<span class="n">cadena</span> <span class="o">=</span> <span class="s1">&#39;P Sherman, calle Wallaby, 42, Sydney&#39;</span>
+<span class="n">booleano</span> <span class="o">=</span> <span class="kc">True</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Tanto los valores Decimales como los Booleanos pueden ser convertidos en Enteros con la función int():</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">decimal</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="kc">True</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="kc">False</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
+1
+0
+</pre></div>
+</div>
+</div>
+</div>
+<p>Algo similar ocurre al intentar convertir Enteros o Booleanos en Decimales con la función float():</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">entero</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="kc">True</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="kc">False</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>33.0
+1.0
+0.0
+</pre></div>
+</div>
+</div>
+</div>
+<p>Es posible también, a partir de la tabla de caracteres ASCII, obtener el caracter correspondiente a un entero con chr() o viceversa con ord():</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">chr</span><span class="p">(</span><span class="n">entero</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">caracter</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>!
+70
+</pre></div>
+</div>
+</div>
+</div>
+<p>Mucho más interesante que esto último resulta la conversión de cualquiera de los tipos de datos presentados en cadenas de texto, algo de vital importancia a la hora de presentar resultados combinándolos con texto (o al revés, al querer sumar variables string con variables numéricas).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">entero</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">entero</span><span class="p">)))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">decimal</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">decimal</span><span class="p">)))</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">booleano</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">booleano</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>33
+&lt;class &#39;str&#39;&gt;
+2.8182
+&lt;class &#39;str&#39;&gt;
+True
+&lt;class &#39;str&#39;&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<section id="error-al-sumar-una-variable-string-con-un-variable-int">
+<h3>Error al sumar una variable string con un variable int<a class="headerlink" href="#error-al-sumar-una-variable-string-con-un-variable-int" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">edad</span> <span class="o">=</span> <span class="s1">&#39;29&#39;</span>
@@ -525,7 +666,7 @@ El tipo de variable de yrupe es: &lt;class &#39;float&#39;&gt;
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span>\<span class="n">ipykernel_14676</span>\<span class="mf">556082915.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span>\<span class="n">ipykernel_7340</span>\<span class="mf">556082915.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">edad</span> <span class="o">=</span> <span class="s1">&#39;29&#39;</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">edad</span> <span class="o">=</span> <span class="n">edad</span> <span class="o">+</span> <span class="mi">10</span>
 
@@ -534,6 +675,9 @@ El tipo de variable de yrupe es: &lt;class &#39;float&#39;&gt;
 </div>
 </div>
 </div>
+</section>
+<section id="conversion-de-string-a-int-para-permitir-la-operacion-de-suma">
+<h3>Conversión de string a int para permitir la operación de suma<a class="headerlink" href="#conversion-de-string-a-int-para-permitir-la-operacion-de-suma" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">edad</span> <span class="o">=</span> <span class="s1">&#39;29&#39;</span>
@@ -548,6 +692,44 @@ El tipo de variable de yrupe es: &lt;class &#39;float&#39;&gt;
 </div>
 </div>
 </div>
+</section>
+</section>
+<section id="variables-reservadas">
+<h2>Variables reservadas<a class="headerlink" href="#variables-reservadas" title="Permalink to this headline">#</a></h2>
+<p>Existen ciertas palabras que tienen significado especial para el intérprete de Python. Estas no pueden utilizarse para ningún otro fin (como ser nombrar valores) excepto para el que han sido creadas. Estas son:</p>
+<ul class="simple">
+<li><p>and.</p></li>
+<li><p>as.</p></li>
+<li><p>assert.</p></li>
+<li><p>break.</p></li>
+<li><p>class.</p></li>
+<li><p>continue.</p></li>
+<li><p>def.</p></li>
+<li><p>del.</p></li>
+<li><p>elif.</p></li>
+<li><p>else.</p></li>
+<li><p>except.</p></li>
+<li><p>exec.</p></li>
+<li><p>finally.</p></li>
+<li><p>for.</p></li>
+<li><p>from.</p></li>
+<li><p>global.</p></li>
+<li><p>if.</p></li>
+<li><p>import.</p></li>
+<li><p>in.</p></li>
+<li><p>is.</p></li>
+<li><p>lambda.</p></li>
+<li><p>not.</p></li>
+<li><p>or.</p></li>
+<li><p>pass.</p></li>
+<li><p>print.</p></li>
+<li><p>raise.</p></li>
+<li><p>return.</p></li>
+<li><p>try.</p></li>
+<li><p>while.</p></li>
+<li><p>with.</p></li>
+<li><p>yield.</p></li>
+</ul>
 </section>
 </section>
 
@@ -584,6 +766,13 @@ El tipo de variable de yrupe es: &lt;class &#39;float&#39;&gt;
             <p class="prev-next-subtitle">previous</p>
             <p class="prev-next-title">Python científico</p>
         </div>
+    </a>
+    <a class='right-next' id="next-link" href="2c_secuencias.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Colecciones - Listas, tuplas, sets y diccionarios.</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
     </a>
 </div>
             </footer>
