@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Distribución Anaconda &#8212; Tutorial Python para herramientas geospaciales</title>
+    <title>Colecciones - Listas, tuplas, sets y diccionarios. &#8212; Tutorial Python para herramientas geospaciales</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,8 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Environments, o entornos virtuales" href="1d_environments.html" />
-    <link rel="prev" title="Características" href="1b_python_caracteristicas.html" />
+    <link rel="prev" title="Variables" href="2b_variables.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -113,7 +112,7 @@ const thebe_selector_output = ".output, .cell_output"
   1 - Empecemos
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="1a_python_que_es.html">
    ¿Qué es Python?
@@ -124,8 +123,8 @@ const thebe_selector_output = ".output, .cell_output"
    Características
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="1c_anaconda.html">
    Distribución Anaconda
   </a>
  </li>
@@ -145,7 +144,7 @@ const thebe_selector_output = ".output, .cell_output"
   2 - Conceptos básicos de programación
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="2a_python_cientifico.html">
    Python científico
@@ -154,6 +153,11 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="2b_variables.html">
    Variables
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Colecciones - Listas, tuplas, sets y diccionarios.
   </a>
  </li>
 </ul>
@@ -207,6 +211,35 @@ title="Toggle navigation"
         
     </div>
     <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/f-machado/pygeo_book/master?urlpath=tree/docs/2c_secuencias.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
 <button onclick="toggleFullScreen()"
   class="headerbtn"
   data-toggle="tooltip"
@@ -246,7 +279,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/f-machado/pygeo_book/issues/new?title=Issue%20on%20page%20%2Fdocs/1c_anaconda.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/f-machado/pygeo_book/issues/new?title=Issue%20on%20page%20%2Fdocs/2c_secuencias.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -274,7 +307,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/docs/1c_anaconda.md"
+        <a href="../_sources/docs/2c_secuencias.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -285,7 +318,7 @@ title="Download source file"
 <span class="headerbtn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="headerbtn__text-container">.md</span>
+<span class="headerbtn__text-container">.ipynb</span>
 </a>
 
       </li>
@@ -311,70 +344,23 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
-</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#instalar-anaconda">
-   Instalar Anaconda
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#actualizar-anaconda">
-   Actualizar Anaconda
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Distribución Anaconda</h1>
+                <h1>Colecciones - Listas, tuplas, sets y diccionarios.</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#instalar-anaconda">
-   Instalar Anaconda
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#actualizar-anaconda">
-   Actualizar Anaconda
-  </a>
- </li>
-</ul>
-
-                        </nav>
                     </div>
                 </div>
             </div>
@@ -382,30 +368,13 @@ title="Print to PDF"
                 
               <div>
                 
-  <section id="distribucion-anaconda">
-<h1>Distribución Anaconda<a class="headerlink" href="#distribucion-anaconda" title="Permalink to this headline">#</a></h1>
-<p>El <a class="reference external" href="https://www.python.org/downloads/">paquete core de Python</a> es fácil de instalar con un instalador <em>standalone</em> en nuestra máquina, sin embargo para estos tutoriales vamos a usar la distribución Anaconda.</p>
-<p><a class="reference external" href="https://www.anaconda.com/what-is-anaconda/">Anaconda</a> es una distribución que contiene:</p>
-<ol class="simple">
-<li><p>El paquete core de Python <strong>y además</strong></p></li>
-<li><p>las versiones compartibles de las librerias más populares para la programación científica.</p></li>
-</ol>
-<p>Anaconda provee un manejo muy útil de instalación de paquete, permitiendonos crear <em>environments</em> como una forma de compartimentalizar las distintas versiones de Python, con sus paquetes y versiones asociadas para un determinado proyecto.</p>
-<p>En particular estos tutoriales fueron creados mediante la libreria <a class="reference external" href="https://jupyterbook.org/en/stable/intro.html">Jupyter Book</a>, para el cual se creó un <em>environment</em> específico con Python 3.7 y los respectivos paquetes que veremos a continuación a lo largo del tutorial.</p>
-<section id="instalar-anaconda">
-<h2>Instalar Anaconda<a class="headerlink" href="#instalar-anaconda" title="Permalink to this headline">#</a></h2>
-<p>Para instalar Anaconda, <a class="reference external" href="https://www.anaconda.com/download/">descargar el binario correspondiente</a> y seguir las instrucciones.</p>
-</section>
-<section id="actualizar-anaconda">
-<h2>Actualizar Anaconda<a class="headerlink" href="#actualizar-anaconda" title="Permalink to this headline">#</a></h2>
-<p>Anaconda utiliza una herramienta denominada <code class="docutils literal notranslate"><span class="pre">conda</span></code> para permitir el manejo de paquetes y <em>environments</em> y actualización de los paquetes pertinentes.</p>
-<p>Un comando <code class="docutils literal notranslate"><span class="pre">conda</span></code> que se debería ejecutar regularmente es el comando que actualiza la totalidad de la distribución Anaconda, para ello:</p>
-<ol class="simple">
-<li><p>Abrir una terminal (<code class="docutils literal notranslate"><span class="pre">Anaconda</span> <span class="pre">Prompt</span></code> en Windows)</p></li>
-<li><p>Ejecutar <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">update</span> <span class="pre">anaconda</span></code></p></li>
-</ol>
-<p>Para más información sobre <code class="docutils literal notranslate"><span class="pre">conda</span></code>, tambien se puede ejecutar <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">help</span></code> en la terminal.</p>
-</section>
+  <section class="tex2jax_ignore mathjax_ignore" id="colecciones-listas-tuplas-sets-y-diccionarios">
+<h1>Colecciones - Listas, tuplas, sets y diccionarios.<a class="headerlink" href="#colecciones-listas-tuplas-sets-y-diccionarios" title="Permalink to this headline">#</a></h1>
+<p>Hay tres tipos básicos de secuencia: listas, tuplas y objetos de tipo rango. Existen tipos de secuencia especiales usados para el procesado de datos binarios y cadenas de caracteres que se describirán en secciones específicas.</p>
+<p>Operaciones comunes de las secuencias
+Las operaciones de la siguiente tabla están soportadas por la mayoría de los tipos secuencia, tanto mutables como inmutables. La clase ABC collections.abc.Sequence se incluye para facilitar la implementación correcta de estas operaciones en nuestros propios tipos de secuencias.</p>
+<p>La tabla lista las operaciones ordenadas de menor a mayor prioridad. En la tabla, s y t representan secuencias del mismo tipo, n, i, j y k son números enteros y x es un objeto arbitrario que cumple con cualquier restricción de tipo o valor impuesta por s.</p>
+<p>Las operaciones in y not in tienen la misma prioridad que los operadores de comparación. Las operaciones + (Concatenación) y * (Repetición) tienen la misma prioridad que sus equivalentes numéricos 3</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -435,19 +404,12 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="1b_python_caracteristicas.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="2b_variables.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Características</p>
+            <p class="prev-next-title">Variables</p>
         </div>
-    </a>
-    <a class='right-next' id="next-link" href="1d_environments.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Environments, o entornos virtuales</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
     </a>
 </div>
             </footer>
