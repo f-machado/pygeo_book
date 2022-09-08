@@ -12,9 +12,8 @@ parts:
   - file: docs/1c_anaconda
   - file: docs/1d_environments
   - file: docs/1e_jupyter
-#  - file: docs/1f_jupyter_notebook
 - caption: 2 - Conceptos básicos de programación
   chapters:
   - file: docs/2a_python_cientifico
   - file: docs/2b_variables
- # - file: docs/2c_secuencias
+  - file: docs/2c_secuencias

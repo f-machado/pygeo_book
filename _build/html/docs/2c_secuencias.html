@@ -344,12 +344,51 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#listas">
+   Listas
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sets">
+   Sets
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tuplas">
+   Tuplas
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#diccionarios">
+   Diccionarios
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -361,6 +400,34 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#listas">
+   Listas
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sets">
+   Sets
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tuplas">
+   Tuplas
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#diccionarios">
+   Diccionarios
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -370,11 +437,27 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="colecciones-listas-tuplas-sets-y-diccionarios">
 <h1>Colecciones - Listas, tuplas, sets y diccionarios.<a class="headerlink" href="#colecciones-listas-tuplas-sets-y-diccionarios" title="Permalink to this headline">#</a></h1>
+<p>La mayoría de los lenguajes de programación proveen objetos contenedores del tipo array, que permiten almacenar un gran número del mismo tipo y acceder a ellos a través de una indexación. Sin embargo Python no contiene en su lenguaje core, o base, el concepto de array. En cambio contiene objetos más generales que permiten el almacenamiento de distintos elementos con sus particularidades, entre ellos listas, tuplas, strings o cadenas, y diccionarios.</p>
+<p>El uso de listas nos permite simular el uso de un array, y en un pasado esta era la forma de realizar cálculo numperico. Pero debido a la generalidad de las listas que dan gran flexibilidad al usuario, tales cálculos toman mucho más tiempo de ejecución que sus equivalentes en Fortran o C, otros lenguajes de programación.</p>
+<p>Para hacer frente a esta dificultad, los desarrolladores crearon una nueva librería, la famosa numpy, que permite la implementación de arrays en C y la vectorización de operaciones, que ayuda a disminuir significativamente pero no completamente eliminar la penalización de velocidad.</p>
+<p>Para usos genéricos, y en pequeña escala, estos tipos de objetos son útiles y eficientes por lo que serán desarrollados en las siguientes secciones. Es cuando se empieza a escalar en cantidad de datos que numpy empieza a tomar escena, situación que es la norma en el uso del procesamiento de imágenes satelitales.</p>
+<section id="listas">
+<h2>Listas<a class="headerlink" href="#listas" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="sets">
+<h2>Sets<a class="headerlink" href="#sets" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="tuplas">
+<h2>Tuplas<a class="headerlink" href="#tuplas" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="diccionarios">
+<h2>Diccionarios<a class="headerlink" href="#diccionarios" title="Permalink to this headline">#</a></h2>
 <p>Hay tres tipos básicos de secuencia: listas, tuplas y objetos de tipo rango. Existen tipos de secuencia especiales usados para el procesado de datos binarios y cadenas de caracteres que se describirán en secciones específicas.</p>
 <p>Operaciones comunes de las secuencias
 Las operaciones de la siguiente tabla están soportadas por la mayoría de los tipos secuencia, tanto mutables como inmutables. La clase ABC collections.abc.Sequence se incluye para facilitar la implementación correcta de estas operaciones en nuestros propios tipos de secuencias.</p>
 <p>La tabla lista las operaciones ordenadas de menor a mayor prioridad. En la tabla, s y t representan secuencias del mismo tipo, n, i, j y k son números enteros y x es un objeto arbitrario que cumple con cualquier restricción de tipo o valor impuesta por s.</p>
 <p>Las operaciones in y not in tienen la misma prioridad que los operadores de comparación. Las operaciones + (Concatenación) y * (Repetición) tienen la misma prioridad que sus equivalentes numéricos 3</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">

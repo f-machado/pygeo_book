@@ -37,3 +37,5 @@
 # Introduction to Scientific Programming with Python. Joakim Sundnes, 2010.
 # 
 # https://realpython.com/python-variables/#variable-types-in-python
+# 
+# https://ingsosa.com/tipos-de-datos-en-python/
