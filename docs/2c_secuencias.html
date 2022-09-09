@@ -407,18 +407,17 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#eliminar-un-elemento-de-una-lista">
-     Eliminar un elemento de una lista
+    <a class="reference internal nav-link" href="#id1">
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#operadores-de-pertenencia">
-     Operadores de pertenencia
+    <a class="reference internal nav-link" href="#operadores-de-pertenencia-en-listas">
+     Operadores de pertenencia en listas
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#ordenar-una-lista">
-     Ordenar una lista
+    <a class="reference internal nav-link" href="#tabla-resumen-de-otras-operaciones">
+     Tabla resumen de otras operaciones
     </a>
    </li>
   </ul>
@@ -503,18 +502,17 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#eliminar-un-elemento-de-una-lista">
-     Eliminar un elemento de una lista
+    <a class="reference internal nav-link" href="#id1">
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#operadores-de-pertenencia">
-     Operadores de pertenencia
+    <a class="reference internal nav-link" href="#operadores-de-pertenencia-en-listas">
+     Operadores de pertenencia en listas
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#ordenar-una-lista">
-     Ordenar una lista
+    <a class="reference internal nav-link" href="#tabla-resumen-de-otras-operaciones">
+     Tabla resumen de otras operaciones
     </a>
    </li>
   </ul>
@@ -677,7 +675,7 @@ El último elemento de la lista es:  SentinelMNDWI_marzo_norm.tif
 </div>
 </div>
 </div>
-<p>Las listas, y en general las secuencias, también permiten la indexación a partir del último elemento usando indexación negativa, accediendo al último elemento con el índice -1, y al primer elemento con n, donde n es el número de elementos totales de la lista.</p>
+<p>Las listas, y en general las secuencias, también permiten la indexación a partir del último elemento usando indexación negativa, accediendo al último elemento con el índice <code class="docutils literal notranslate"><span class="pre">-1</span></code>, y al primer elemento con <code class="docutils literal notranslate"><span class="pre">n</span></code>, donde <code class="docutils literal notranslate"><span class="pre">n</span></code> es el número de elementos totales de la lista.</p>
 <p>Por lo tanto para acceder al último elemento se puede ejecutar la siguiente sentencia:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -709,19 +707,190 @@ El último elemento de la lista es:  SentinelMNDWI_marzo_norm.tif
 </section>
 <section id="acceso-a-un-subconjunto-de-elementos">
 <h3>Acceso a un subconjunto de elementos<a class="headerlink" href="#acceso-a-un-subconjunto-de-elementos" title="Permalink to this headline">#</a></h3>
+<p>Dada un lista cualquiera, podemos formar listas a partir de ella usando la operación de slicing. La forma más básica de realizarla es, dada una lista llamada <code class="docutils literal notranslate"><span class="pre">l</span></code>, podemos acceder a un subconjunto dado por por <code class="docutils literal notranslate"><span class="pre">l</span></code>[<code class="docutils literal notranslate"><span class="pre">principio</span></code>:<code class="docutils literal notranslate"><span class="pre">final</span></code>], utilizado el operador <code class="docutils literal notranslate"><span class="pre">[:]</span></code>.</p>
+<img alt="../_images/list_slicing.png" class="align-center" src="../_images/list_slicing.png" />
+<p>Notemos que el subconjunto extraído mediante esta notación va desde <code class="docutils literal notranslate"><span class="pre">principio</span></code> hasta <code class="docutils literal notranslate"><span class="pre">final-1</span></code>. También los argumentos de principio y final son opcionales, si no se especifican se toma por defecto el primer elemento de la lista, o el último.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Inicialiar la lista de esta forma con un string, nos crea una lista con cada elemento ocupando un lugar en la lista.</span>
+<span class="n">lista_ejemplo</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="s1">&#39;abcdefgh&#39;</span><span class="p">)</span> 
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Esta es la lista de ejemplo usada como base para extraer subsecciones: &#39;</span><span class="p">,</span> <span class="n">lista_ejemplo</span><span class="p">)</span>
+
+<span class="c1">#Observamos que se imprimen los elementos de la lista de la posición 0 hasta la 3. </span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Resultado de [0:4]: &#39;</span><span class="p">,</span> <span class="n">lista_ejemplo</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">])</span>
+
+<span class="c1"># Los argumentos de principio y final son opcionales en el operador :</span>
+<span class="c1"># Vemos que el 0 se puede obviar en esta ocasión para obtener un ressultado equivalente:</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Resultado de [:4]: &#39;</span><span class="p">,</span> <span class="n">lista_ejemplo</span><span class="p">[:</span><span class="mi">4</span><span class="p">])</span>
+
+<span class="c1"># También se pueden usar subíndices negativos</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Resultado de [-4:-1]: &#39;</span><span class="p">,</span> <span class="n">lista_ejemplo</span><span class="p">[</span><span class="o">-</span><span class="mi">4</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Resultado de [-4:]: &#39;</span><span class="p">,</span> <span class="n">lista_ejemplo</span><span class="p">[</span><span class="o">-</span><span class="mi">4</span><span class="p">:])</span>
+
+<span class="c1"># Y combinación de índices positivos y negativos</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Resultado de [1:-3]: &#39;</span><span class="p">,</span> <span class="n">lista_ejemplo</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">3</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Esta es la lista de ejemplo usada como base para extraer subsecciones:  [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;f&#39;, &#39;g&#39;, &#39;h&#39;]
+Resultado de [0:4]:  [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;]
+Resultado de [:4]:  [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;]
+Resultado de [-4:-1]:  [&#39;e&#39;, &#39;f&#39;, &#39;g&#39;]
+Resultado de [-4:]:  [&#39;e&#39;, &#39;f&#39;, &#39;g&#39;, &#39;h&#39;]
+Resultado de [1:-3]:  [&#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>También es posible acceder a los elementos de una lista indicando un paso con el operador <code class="docutils literal notranslate"><span class="pre">[::]</span></code>, es decir [<code class="docutils literal notranslate"><span class="pre">principio</span></code>:<code class="docutils literal notranslate"><span class="pre">final</span></code>:<code class="docutils literal notranslate"><span class="pre">paso</span></code>].</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Esta es la lista de ejemplo usada como base para extraer subsecciones: &#39;</span><span class="p">,</span> <span class="n">lista_ejemplo</span><span class="p">)</span>
+
+<span class="c1">#Observamos que se imprimen los elementos de la lista de la posición 0 hasta la 4, con un paso de 2. </span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Resultado de [0:4:2]: &#39;</span><span class="p">,</span> <span class="n">lista_ejemplo</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">:</span><span class="mi">2</span><span class="p">])</span>
+
+<span class="c1"># Imprimimos todos los elementos de la lista pero en orden reverso</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Resultado de [::-1]: &#39;</span><span class="p">,</span> <span class="n">lista_ejemplo</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Resultado de [-6:-4:-2]: &#39;</span><span class="p">,</span> <span class="n">lista_ejemplo</span><span class="p">[</span><span class="o">-</span><span class="mi">4</span><span class="p">:</span><span class="o">-</span><span class="mi">7</span><span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Esta es la lista de ejemplo usada como base para extraer subsecciones:  [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;f&#39;, &#39;g&#39;, &#39;h&#39;]
+Resultado de [0:4:2]:  [&#39;a&#39;, &#39;c&#39;]
+Resultado de [::-1]:  [&#39;h&#39;, &#39;g&#39;, &#39;f&#39;, &#39;e&#39;, &#39;d&#39;, &#39;c&#39;, &#39;b&#39;, &#39;a&#39;]
+Resultado de [-6:-4:-2]:  [&#39;e&#39;, &#39;c&#39;]
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 <section id="modificar-elementos-de-una-lista">
 <h3>Modificar elementos de una lista<a class="headerlink" href="#modificar-elementos-de-una-lista" title="Permalink to this headline">#</a></h3>
+<p>Es posible modificar un elemento de una lista en Python con el operador de asignación <code class="docutils literal notranslate"><span class="pre">=</span></code>. Para ello, lo único que se necesita es el índice del elemento que se quiere modificar o el rango de índices:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lista_ejemplo</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;alpha&#39;</span><span class="p">,</span> <span class="s1">&#39;beta&#39;</span><span class="p">,</span> <span class="s1">&#39;gamma&#39;</span><span class="p">]</span>
+<span class="n">lista_ejemplo</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;El saldo de tu tarjeta es insuficiente&#39;</span>
+
+<span class="n">lista_ejemplo</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;alpha&#39;,
+ &#39;beta&#39;,
+ &#39;gamma&#39;,
+ &#39;e&#39;,
+ &#39;f&#39;,
+ &#39;g&#39;,
+ &#39;El saldo de tu tarjeta es insuficiente&#39;]
+</pre></div>
+</div>
+</div>
+</div>
 </section>
-<section id="eliminar-un-elemento-de-una-lista">
-<h3>Eliminar un elemento de una lista<a class="headerlink" href="#eliminar-un-elemento-de-una-lista" title="Permalink to this headline">#</a></h3>
+<section id="id1">
+<h3><a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
 </section>
-<section id="operadores-de-pertenencia">
-<h3>Operadores de pertenencia<a class="headerlink" href="#operadores-de-pertenencia" title="Permalink to this headline">#</a></h3>
+<section id="operadores-de-pertenencia-en-listas">
+<h3>Operadores de pertenencia en listas<a class="headerlink" href="#operadores-de-pertenencia-en-listas" title="Permalink to this headline">#</a></h3>
+<p>Se pueden utilizar los operadores de pertinencia <code class="docutils literal notranslate"><span class="pre">in</span></code> y <code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">in</span></code> para determinar si un elemento en particular se encuentra dentro de una lista, y en general en cualquier secuencia.</p>
+<p>Si el elemento se encuentra en la lista, el operador <code class="docutils literal notranslate"><span class="pre">in</span></code> dará <code class="docutils literal notranslate"><span class="pre">True</span></code> y <code class="docutils literal notranslate"><span class="pre">False</span></code> si no se encuentra. Asimismo <code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">in</span></code> es la operación complemento.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Los valores de los elementos de la lista son: &#39;</span><span class="p">,</span> <span class="n">lista_ejemplo</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="c1">#Imprimimos un cadena vacía para hacer un renglón, es puramente estético.</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Se encuentra e en lista_ejemplo?: &#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span> <span class="ow">in</span> <span class="n">lista_ejemplo</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Se encuentra a en lista_ejemplo?: &#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span> <span class="ow">in</span> <span class="n">lista_ejemplo</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;No se encuentra a en lista_ejemplo?: &#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">lista_ejemplo</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Los valores de los elementos de la lista son:  [&#39;alpha&#39;, &#39;beta&#39;, &#39;gamma&#39;, &#39;e&#39;, &#39;f&#39;, &#39;g&#39;, &#39;El saldo de tu tarjeta es insuficiente&#39;]
+
+Se encuentra e en lista_ejemplo?:  True
+Se encuentra a en lista_ejemplo?:  False
+No se encuentra a en lista_ejemplo?:  True
+</pre></div>
+</div>
+</div>
+</div>
 </section>
-<section id="ordenar-una-lista">
-<h3>Ordenar una lista<a class="headerlink" href="#ordenar-una-lista" title="Permalink to this headline">#</a></h3>
-</section>
+<section id="tabla-resumen-de-otras-operaciones">
+<h3>Tabla resumen de otras operaciones<a class="headerlink" href="#tabla-resumen-de-otras-operaciones" title="Permalink to this headline">#</a></h3>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-color:#ccc;border-spacing:0;}
+.tg td{background-color:#fff;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
+  font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{background-color:#f0f0f0;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
+  font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-64ey{background-color:#dae8fc;border-color:#c0c0c0;font-family:inherit;text-align:center;vertical-align:top}
+.tg .tg-35ak{background-color:#dae8fc;border-color:#c0c0c0;font-family:inherit;text-align:left;vertical-align:top}
+.tg .tg-ow7q{border-color:#c0c0c0;font-family:inherit;text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-64ey">Método</th>
+    <th class="tg-35ak">Descripción</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-ow7q">append()</td>
+    <td class="tg-ow7q">Añade un nuevo elemento al final de la lista.</td>
+  </tr>
+  <tr>
+    <td class="tg-ow7q">extend()</td>
+    <td class="tg-ow7q">Añade un grupo de elementos (iterables) al final de la lista.</td>
+  </tr>
+  <tr>
+    <td class="tg-ow7q">insert(indice, elemento)</td>
+    <td class="tg-ow7q">Inserta un elemento en una posición concreta de la lista.</td>
+  </tr>
+  <tr>
+    <td class="tg-ow7q">remove(elemento)</td>
+    <td class="tg-ow7q">Elimina la primera ocurrencia del elemento en la lista.</td>
+  </tr>
+  <tr>
+    <td class="tg-ow7q">pop([i])</td>
+    <td class="tg-ow7q">Obtiene y elimina el elemento de la lista en la posición i. Si no se especifica, obtiene y elimina el último elemento.</td>
+  </tr>
+  <tr>
+    <td class="tg-ow7q">clear()</td>
+    <td class="tg-ow7q">Borra todos los elementos de la lista.</td>
+  </tr>
+  <tr>
+    <td class="tg-ow7q">index(elemento)</td>
+    <td class="tg-ow7q">Obtiene el índice de la primera ocurrencia del elemento en la lista. Si el elemento no se encuentra, se lanza la excepción ValueError.</td>
+  </tr>
+  <tr>
+    <td class="tg-ow7q">count(elemento)</td>
+    <td class="tg-ow7q">Devuelve el número de ocurrencias del elemento en la lista.</td>
+  </tr>
+  <tr>
+    <td class="tg-ow7q">sort()</td>
+    <td class="tg-ow7q">Ordena los elementos de la lista utilizando el operador &lt;.</td>
+  </tr>
+  <tr>
+    <td class="tg-ow7q">reverse()</td>
+    <td class="tg-ow7q">Obtiene los elementos de la lista en orden inverso.</td>
+  </tr>
+  <tr>
+    <td class="tg-ow7q">copy()</td>
+    <td class="tg-ow7q">Devuelve una copia poco profunda de la lista.</td>
+  </tr>
+</tbody>
+</table></section>
 </section>
 <section id="sets">
 <h2>Sets<a class="headerlink" href="#sets" title="Permalink to this headline">#</a></h2>
