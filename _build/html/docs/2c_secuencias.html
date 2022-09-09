@@ -1,0 +1,970 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Colecciones - Listas, tuplas, sets y diccionarios. &#8212; Tutorial Python para herramientas geospaciales</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Variables" href="2b_variables.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Tutorial Python para herramientas geospaciales</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="0_intro.html">
+                    Bienvenidos
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  1 - Empecemos
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="1a_python_que_es.html">
+   ¿Qué es Python?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="1b_python_caracteristicas.html">
+   Características
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="1c_anaconda.html">
+   Distribución Anaconda
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="1d_environments.html">
+   Environments, o entornos virtuales
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="1e_jupyter.html">
+   Jupyter Notebook
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  2 - Conceptos básicos de programación
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="2a_python_cientifico.html">
+   Python científico
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2b_variables.html">
+   Variables
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Colecciones - Listas, tuplas, sets y diccionarios.
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/f-machado/pygeo_book/master?urlpath=tree/docs/2c_secuencias.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/f-machado/pygeo_book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/f-machado/pygeo_book/issues/new?title=Issue%20on%20page%20%2Fdocs/2c_secuencias.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/docs/2c_secuencias.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#listas">
+   Listas
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#inicializar-una-lista-vacia">
+     Inicializar una lista vacía
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#inicializar-una-lista-con-elementos">
+     Inicializar una lista con elementos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#determinar-el-tamano-de-la-lista">
+     Determinar el tamaño de la lista
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#agregar-elemento-a-la-lista">
+     Agregar elemento a la lista
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#acceder-a-un-elemento-de-la-lista">
+     Acceder a un elemento de la lista
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#acceso-a-un-subconjunto-de-elementos">
+     Acceso a un subconjunto de elementos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#modificar-elementos-de-una-lista">
+     Modificar elementos de una lista
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#operadores-de-pertenencia-en-listas">
+     Operadores de pertenencia en listas
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tabla-resumen-de-otras-operaciones">
+     Tabla resumen de otras operaciones
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sets">
+   Sets
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tuplas">
+   Tuplas
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#diccionarios">
+   Diccionarios
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#operaciones-comunes-de-las-secuencias">
+   Operaciones comunes de las secuencias
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Colecciones - Listas, tuplas, sets y diccionarios.</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#listas">
+   Listas
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#inicializar-una-lista-vacia">
+     Inicializar una lista vacía
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#inicializar-una-lista-con-elementos">
+     Inicializar una lista con elementos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#determinar-el-tamano-de-la-lista">
+     Determinar el tamaño de la lista
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#agregar-elemento-a-la-lista">
+     Agregar elemento a la lista
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#acceder-a-un-elemento-de-la-lista">
+     Acceder a un elemento de la lista
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#acceso-a-un-subconjunto-de-elementos">
+     Acceso a un subconjunto de elementos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#modificar-elementos-de-una-lista">
+     Modificar elementos de una lista
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#operadores-de-pertenencia-en-listas">
+     Operadores de pertenencia en listas
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tabla-resumen-de-otras-operaciones">
+     Tabla resumen de otras operaciones
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sets">
+   Sets
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tuplas">
+   Tuplas
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#diccionarios">
+   Diccionarios
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#operaciones-comunes-de-las-secuencias">
+   Operaciones comunes de las secuencias
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="colecciones-listas-tuplas-sets-y-diccionarios">
+<h1>Colecciones - Listas, tuplas, sets y diccionarios.<a class="headerlink" href="#colecciones-listas-tuplas-sets-y-diccionarios" title="Permalink to this headline">#</a></h1>
+<p>La mayoría de los lenguajes de programación proveen objetos contenedores del tipo <code class="docutils literal notranslate"><span class="pre">array</span></code>, que permiten almacenar un gran número del mismo tipo y acceder a ellos a través de una indexación. Sin embargo Python no contiene en su lenguaje core, o base, el concepto de array. En cambio contiene objetos más generales que permiten el almacenamiento de distintos elementos con sus particularidades, entre ellos <code class="docutils literal notranslate"><span class="pre">listas</span></code>, <code class="docutils literal notranslate"><span class="pre">tuplas</span></code>, <code class="docutils literal notranslate"><span class="pre">strings</span> <span class="pre">o</span> <span class="pre">cadenas</span></code>, y <code class="docutils literal notranslate"><span class="pre">diccionarios</span></code>.</p>
+<p>Las listas en Python son un tipo <strong>contenedor</strong>, compuesto, que se usan para almacenar conjuntos de elementos relacionados del mismo tipo o de tipos distintos. Junto a las clases tuple, range y str, son uno de los tipos de <strong>secuencia</strong> en Python, con la particularidad de que son mutables. Esto último quiere decir que su contenido se puede modificar después de haber sido creada.</p>
+<p>El uso de listas nos permite simular el uso de un array, y en un pasado esta era la forma de realizar cálculo numérico. Pero debido a la generalidad de las listas que dan gran flexibilidad al usuario, tales cálculos toman mucho más tiempo de ejecución que sus equivalentes en Fortran o C, otros lenguajes de programación.</p>
+<p>Para hacer frente a esta dificultad, los desarrolladores crearon una nueva librería, la famosa <code class="docutils literal notranslate"><span class="pre">numpy</span></code>, que permite la implementación de arrays en C y la vectorización de operaciones, que ayuda a disminuir significativamente pero no completamente eliminar la penalización de velocidad.</p>
+<p>Para usos genéricos, y en pequeña escala, estos tipos de objetos son útiles y eficientes por lo que serán desarrollados en las siguientes secciones. Es cuando se empieza a escalar en cantidad de datos que <code class="docutils literal notranslate"><span class="pre">numpy</span></code> empieza a tomar escena, situación que es la norma en el uso del procesamiento de imágenes satelitales.</p>
+<section id="listas">
+<h2>Listas<a class="headerlink" href="#listas" title="Permalink to this headline">#</a></h2>
+<p>Una <code class="docutils literal notranslate"><span class="pre">lista</span></code> es un objeto Python que consiste en un conjunto ordenado de elementos, encerrados por corchetes y separados por coma. Pueden agruparse valores de distintos tipos de datos básicos, hasta listas pueden ser un elemento de una lista.</p>
+<p>Además este tipo de datos se consideran <code class="docutils literal notranslate"><span class="pre">mutables</span></code>, es decir se pueden agregar, eliminar o modificar elementos de las listas en cualquier momento.</p>
+<p>Para los propósitos de indexación, el orden comienza con el índice <code class="docutils literal notranslate"><span class="pre">0</span></code> para el primer lugar de la lista, y termina con el índice <code class="docutils literal notranslate"><span class="pre">n-1</span></code>, donde n es el número de elementos en la lista.</p>
+<section id="inicializar-una-lista-vacia">
+<h3>Inicializar una lista vacía<a class="headerlink" href="#inicializar-una-lista-vacia" title="Permalink to this headline">#</a></h3>
+<p>A veces es útil inicializar una lista vacía, donde a lo largo de un programa vayamos agregando distintos elementos a ella. Para ello, existen dos formas de realizarlo:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lista_vacia</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">otra_lista_vacia</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="inicializar-una-lista-con-elementos">
+<h3>Inicializar una lista con elementos<a class="headerlink" href="#inicializar-una-lista-con-elementos" title="Permalink to this headline">#</a></h3>
+<p>Para inicializar una lista con elementos, podemos agregar los datos y/o variables compatibles separados por comas y entre corchetes.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lista_con_elementos_varios</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="n">lista_vacia</span><span class="p">,</span> <span class="mf">7.56</span><span class="p">,</span> <span class="kc">True</span><span class="p">]</span>
+
+<span class="n">lista_con_elementos_varios</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, &#39;b&#39;, [], 7.56, True]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="determinar-el-tamano-de-la-lista">
+<h3>Determinar el tamaño de la lista<a class="headerlink" href="#determinar-el-tamano-de-la-lista" title="Permalink to this headline">#</a></h3>
+<p>Usaremos la función <code class="docutils literal notranslate"><span class="pre">help</span></code> para imprimir que realiza la función <code class="docutils literal notranslate"><span class="pre">len</span></code>, y que argumentos tiene como entrada.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="nb">len</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Help on built-in function len in module builtins:
+
+len(obj, /)
+    Return the number of items in a container.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">lista_con_elementos_varios</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="agregar-elemento-a-la-lista">
+<h3>Agregar elemento a la lista<a class="headerlink" href="#agregar-elemento-a-la-lista" title="Permalink to this headline">#</a></h3>
+<p>Para agregar un elemento a la lista, usaremos el método <code class="docutils literal notranslate"><span class="pre">append</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="nb">list</span><span class="o">.</span><span class="n">append</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Help on method_descriptor:
+
+append(self, object, /)
+    Append object to the end of the list.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nuevo_elemento_a_agregar</span> <span class="o">=</span> <span class="s1">&#39;SentinelMNDWI_marzo_norm.tif&#39;</span>
+<span class="n">lista_con_elementos_varios</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">nuevo_elemento_a_agregar</span><span class="p">)</span>
+
+<span class="n">lista_con_elementos_varios</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, &#39;b&#39;, [], 7.56, True, &#39;SentinelMNDWI_marzo_norm.tif&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="acceder-a-un-elemento-de-la-lista">
+<h3>Acceder a un elemento de la lista<a class="headerlink" href="#acceder-a-un-elemento-de-la-lista" title="Permalink to this headline">#</a></h3>
+<p>Como se dijo al principio de esta sección, los elementos de una lista (y en general para todas las secuencias), pueden accederse a través de un índice el cual va de <code class="docutils literal notranslate"><span class="pre">0</span></code> a <code class="docutils literal notranslate"><span class="pre">n-1</span></code>, siendo n el tamaño de la lista.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">lista_con_elementos_varios</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;El primer elemento de la lista es: &#39;</span><span class="p">,</span> <span class="n">lista_con_elementos_varios</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;El último elemento de la lista es: &#39;</span><span class="p">,</span> <span class="n">lista_con_elementos_varios</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">lista_con_elementos_varios</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, &#39;b&#39;, [], 7.56, True, &#39;SentinelMNDWI_marzo_norm.tif&#39;]
+El primer elemento de la lista es:  1
+El último elemento de la lista es:  SentinelMNDWI_marzo_norm.tif
+</pre></div>
+</div>
+</div>
+</div>
+<p>Las listas, y en general las secuencias, también permiten la indexación a partir del último elemento usando indexación negativa, accediendo al último elemento con el índice <code class="docutils literal notranslate"><span class="pre">-1</span></code>, y al primer elemento con <code class="docutils literal notranslate"><span class="pre">n</span></code>, donde <code class="docutils literal notranslate"><span class="pre">n</span></code> es el número de elementos totales de la lista.</p>
+<p>Por lo tanto para acceder al último elemento se puede ejecutar la siguiente sentencia:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">lista_con_elementos_varios</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;El último elemento de la lista es: &#39;</span><span class="p">,</span> <span class="n">lista_con_elementos_varios</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, &#39;b&#39;, [], 7.56, True, &#39;SentinelMNDWI_marzo_norm.tif&#39;]
+El último elemento de la lista es:  SentinelMNDWI_marzo_norm.tif
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;El primer elemento de la lista usando indexación negativa es: &#39;</span><span class="p">,</span> <span class="n">lista_con_elementos_varios</span><span class="p">[</span><span class="o">-</span><span class="nb">len</span><span class="p">(</span><span class="n">lista_con_elementos_varios</span><span class="p">)])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>El primer elemento de la lista usando indexación negativa es:  1
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="acceso-a-un-subconjunto-de-elementos">
+<h3>Acceso a un subconjunto de elementos<a class="headerlink" href="#acceso-a-un-subconjunto-de-elementos" title="Permalink to this headline">#</a></h3>
+<p>Dada un lista cualquiera, podemos formar listas a partir de ella usando la operación de slicing. La forma más básica de realizarla es, dada una lista llamada <code class="docutils literal notranslate"><span class="pre">l</span></code>, podemos acceder a un subconjunto dado por por <code class="docutils literal notranslate"><span class="pre">l</span></code>[<code class="docutils literal notranslate"><span class="pre">principio</span></code>:<code class="docutils literal notranslate"><span class="pre">final</span></code>], utilizado el operador <code class="docutils literal notranslate"><span class="pre">[:]</span></code>.</p>
+<img alt="../_images/list_slicing.png" class="align-center" src="../_images/list_slicing.png" />
+<p>Notemos que el subconjunto extraído mediante esta notación va desde <code class="docutils literal notranslate"><span class="pre">principio</span></code> hasta <code class="docutils literal notranslate"><span class="pre">final-1</span></code>. También los argumentos de principio y final son opcionales, si no se especifican se toma por defecto el primer elemento de la lista, o el último.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Inicialiar la lista de esta forma con un string, nos crea una lista con cada elemento ocupando un lugar en la lista.</span>
+<span class="n">lista_ejemplo</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="s1">&#39;abcdefgh&#39;</span><span class="p">)</span> 
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Esta es la lista de ejemplo usada como base para extraer subsecciones: &#39;</span><span class="p">,</span> <span class="n">lista_ejemplo</span><span class="p">)</span>
+
+<span class="c1">#Observamos que se imprimen los elementos de la lista de la posición 0 hasta la 3. </span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Resultado de [0:4]: &#39;</span><span class="p">,</span> <span class="n">lista_ejemplo</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">])</span>
+
+<span class="c1"># Los argumentos de principio y final son opcionales en el operador :</span>
+<span class="c1"># Vemos que el 0 se puede obviar en esta ocasión para obtener un ressultado equivalente:</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Resultado de [:4]: &#39;</span><span class="p">,</span> <span class="n">lista_ejemplo</span><span class="p">[:</span><span class="mi">4</span><span class="p">])</span>
+
+<span class="c1"># También se pueden usar subíndices negativos</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Resultado de [-4:-1]: &#39;</span><span class="p">,</span> <span class="n">lista_ejemplo</span><span class="p">[</span><span class="o">-</span><span class="mi">4</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Resultado de [-4:]: &#39;</span><span class="p">,</span> <span class="n">lista_ejemplo</span><span class="p">[</span><span class="o">-</span><span class="mi">4</span><span class="p">:])</span>
+
+<span class="c1"># Y combinación de índices positivos y negativos</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Resultado de [1:-3]: &#39;</span><span class="p">,</span> <span class="n">lista_ejemplo</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">3</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Esta es la lista de ejemplo usada como base para extraer subsecciones:  [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;f&#39;, &#39;g&#39;, &#39;h&#39;]
+Resultado de [0:4]:  [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;]
+Resultado de [:4]:  [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;]
+Resultado de [-4:-1]:  [&#39;e&#39;, &#39;f&#39;, &#39;g&#39;]
+Resultado de [-4:]:  [&#39;e&#39;, &#39;f&#39;, &#39;g&#39;, &#39;h&#39;]
+Resultado de [1:-3]:  [&#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>También es posible acceder a los elementos de una lista indicando un paso con el operador <code class="docutils literal notranslate"><span class="pre">[::]</span></code>, es decir [<code class="docutils literal notranslate"><span class="pre">principio</span></code>:<code class="docutils literal notranslate"><span class="pre">final</span></code>:<code class="docutils literal notranslate"><span class="pre">paso</span></code>].</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Esta es la lista de ejemplo usada como base para extraer subsecciones: &#39;</span><span class="p">,</span> <span class="n">lista_ejemplo</span><span class="p">)</span>
+
+<span class="c1">#Observamos que se imprimen los elementos de la lista de la posición 0 hasta la 4, con un paso de 2. </span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Resultado de [0:4:2]: &#39;</span><span class="p">,</span> <span class="n">lista_ejemplo</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">:</span><span class="mi">2</span><span class="p">])</span>
+
+<span class="c1"># Imprimimos todos los elementos de la lista pero en orden reverso</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Resultado de [::-1]: &#39;</span><span class="p">,</span> <span class="n">lista_ejemplo</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Resultado de [-6:-4:-2]: &#39;</span><span class="p">,</span> <span class="n">lista_ejemplo</span><span class="p">[</span><span class="o">-</span><span class="mi">4</span><span class="p">:</span><span class="o">-</span><span class="mi">7</span><span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Esta es la lista de ejemplo usada como base para extraer subsecciones:  [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;f&#39;, &#39;g&#39;, &#39;h&#39;]
+Resultado de [0:4:2]:  [&#39;a&#39;, &#39;c&#39;]
+Resultado de [::-1]:  [&#39;h&#39;, &#39;g&#39;, &#39;f&#39;, &#39;e&#39;, &#39;d&#39;, &#39;c&#39;, &#39;b&#39;, &#39;a&#39;]
+Resultado de [-6:-4:-2]:  [&#39;e&#39;, &#39;c&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="modificar-elementos-de-una-lista">
+<h3>Modificar elementos de una lista<a class="headerlink" href="#modificar-elementos-de-una-lista" title="Permalink to this headline">#</a></h3>
+<p>Es posible modificar un elemento de una lista en Python con el operador de asignación <code class="docutils literal notranslate"><span class="pre">=</span></code>. Para ello, lo único que se necesita es el índice del elemento que se quiere modificar o el rango de índices:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lista_ejemplo</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;alpha&#39;</span><span class="p">,</span> <span class="s1">&#39;beta&#39;</span><span class="p">,</span> <span class="s1">&#39;gamma&#39;</span><span class="p">]</span>
+<span class="n">lista_ejemplo</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;El saldo de tu tarjeta es insuficiente&#39;</span>
+
+<span class="n">lista_ejemplo</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;alpha&#39;,
+ &#39;beta&#39;,
+ &#39;gamma&#39;,
+ &#39;e&#39;,
+ &#39;f&#39;,
+ &#39;g&#39;,
+ &#39;El saldo de tu tarjeta es insuficiente&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id1">
+<h3><a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="operadores-de-pertenencia-en-listas">
+<h3>Operadores de pertenencia en listas<a class="headerlink" href="#operadores-de-pertenencia-en-listas" title="Permalink to this headline">#</a></h3>
+<p>Se pueden utilizar los operadores de pertinencia <code class="docutils literal notranslate"><span class="pre">in</span></code> y <code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">in</span></code> para determinar si un elemento en particular se encuentra dentro de una lista, y en general en cualquier secuencia.</p>
+<p>Si el elemento se encuentra en la lista, el operador <code class="docutils literal notranslate"><span class="pre">in</span></code> dará <code class="docutils literal notranslate"><span class="pre">True</span></code> y <code class="docutils literal notranslate"><span class="pre">False</span></code> si no se encuentra. Asimismo <code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">in</span></code> es la operación complemento.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Los valores de los elementos de la lista son: &#39;</span><span class="p">,</span> <span class="n">lista_ejemplo</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="c1">#Imprimimos un cadena vacía para hacer un renglón, es puramente estético.</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Se encuentra e en lista_ejemplo?: &#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span> <span class="ow">in</span> <span class="n">lista_ejemplo</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Se encuentra a en lista_ejemplo?: &#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span> <span class="ow">in</span> <span class="n">lista_ejemplo</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;No se encuentra a en lista_ejemplo?: &#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">lista_ejemplo</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Los valores de los elementos de la lista son:  [&#39;alpha&#39;, &#39;beta&#39;, &#39;gamma&#39;, &#39;e&#39;, &#39;f&#39;, &#39;g&#39;, &#39;El saldo de tu tarjeta es insuficiente&#39;]
+
+Se encuentra e en lista_ejemplo?:  True
+Se encuentra a en lista_ejemplo?:  False
+No se encuentra a en lista_ejemplo?:  True
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="tabla-resumen-de-otras-operaciones">
+<h3>Tabla resumen de otras operaciones<a class="headerlink" href="#tabla-resumen-de-otras-operaciones" title="Permalink to this headline">#</a></h3>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-color:#ccc;border-spacing:0;}
+.tg td{background-color:#fff;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
+  font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{background-color:#f0f0f0;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
+  font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-64ey{background-color:#dae8fc;border-color:#c0c0c0;font-family:inherit;text-align:center;vertical-align:top}
+.tg .tg-35ak{background-color:#dae8fc;border-color:#c0c0c0;font-family:inherit;text-align:left;vertical-align:top}
+.tg .tg-ow7q{border-color:#c0c0c0;font-family:inherit;text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-64ey">Método</th>
+    <th class="tg-35ak">Descripción</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-ow7q">append()</td>
+    <td class="tg-ow7q">Añade un nuevo elemento al final de la lista.</td>
+  </tr>
+  <tr>
+    <td class="tg-ow7q">extend()</td>
+    <td class="tg-ow7q">Añade un grupo de elementos (iterables) al final de la lista.</td>
+  </tr>
+  <tr>
+    <td class="tg-ow7q">insert(indice, elemento)</td>
+    <td class="tg-ow7q">Inserta un elemento en una posición concreta de la lista.</td>
+  </tr>
+  <tr>
+    <td class="tg-ow7q">remove(elemento)</td>
+    <td class="tg-ow7q">Elimina la primera ocurrencia del elemento en la lista.</td>
+  </tr>
+  <tr>
+    <td class="tg-ow7q">pop([i])</td>
+    <td class="tg-ow7q">Obtiene y elimina el elemento de la lista en la posición i. Si no se especifica, obtiene y elimina el último elemento.</td>
+  </tr>
+  <tr>
+    <td class="tg-ow7q">clear()</td>
+    <td class="tg-ow7q">Borra todos los elementos de la lista.</td>
+  </tr>
+  <tr>
+    <td class="tg-ow7q">index(elemento)</td>
+    <td class="tg-ow7q">Obtiene el índice de la primera ocurrencia del elemento en la lista. Si el elemento no se encuentra, se lanza la excepción ValueError.</td>
+  </tr>
+  <tr>
+    <td class="tg-ow7q">count(elemento)</td>
+    <td class="tg-ow7q">Devuelve el número de ocurrencias del elemento en la lista.</td>
+  </tr>
+  <tr>
+    <td class="tg-ow7q">sort()</td>
+    <td class="tg-ow7q">Ordena los elementos de la lista utilizando el operador &lt;.</td>
+  </tr>
+  <tr>
+    <td class="tg-ow7q">reverse()</td>
+    <td class="tg-ow7q">Obtiene los elementos de la lista en orden inverso.</td>
+  </tr>
+  <tr>
+    <td class="tg-ow7q">copy()</td>
+    <td class="tg-ow7q">Devuelve una copia poco profunda de la lista.</td>
+  </tr>
+</tbody>
+</table></section>
+</section>
+<section id="sets">
+<h2>Sets<a class="headerlink" href="#sets" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="tuplas">
+<h2>Tuplas<a class="headerlink" href="#tuplas" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="diccionarios">
+<h2>Diccionarios<a class="headerlink" href="#diccionarios" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="operaciones-comunes-de-las-secuencias">
+<h2>Operaciones comunes de las secuencias<a class="headerlink" href="#operaciones-comunes-de-las-secuencias" title="Permalink to this headline">#</a></h2>
+<p>Las operaciones de la siguiente tabla están soportadas por la mayoría de los tipos secuencia, tanto mutables como inmutables. La clase ABC collections.abc.Sequence se incluye para facilitar la implementación correcta de estas operaciones en nuestros propios tipos de secuencias.</p>
+<p>La tabla lista las operaciones ordenadas de menor a mayor prioridad. En la tabla, s y t representan secuencias del mismo tipo, n, i, j y k son números enteros y x es un objeto arbitrario que cumple con cualquier restricción de tipo o valor impuesta por s.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./docs"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="2b_variables.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Variables</p>
+        </div>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Federico Machado y Mauro López Gregori<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
