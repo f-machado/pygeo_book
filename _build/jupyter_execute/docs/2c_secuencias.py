@@ -34,6 +34,8 @@ lista_vacia = []
 otra_lista_vacia = list()
 
 
+# 
+
 # ### Inicializar una lista con elementos
 # 
 # Para inicializar una lista con elementos, podemos agregar los datos y/o variables compatibles separados por comas y entre corchetes.
@@ -45,6 +47,8 @@ lista_con_elementos_varios = [1, 'b', lista_vacia, 7.56, True]
 
 lista_con_elementos_varios
 
+
+# 
 
 # 
 # ### Determinar el tamaño de la lista
@@ -64,6 +68,8 @@ help(len)
 len(lista_con_elementos_varios)
 
 
+# 
+
 # ### Agregar elemento a la lista
 # 
 # Para agregar un elemento a la lista, usaremos el método `append`:
@@ -82,6 +88,8 @@ lista_con_elementos_varios.append(nuevo_elemento_a_agregar)
 
 lista_con_elementos_varios
 
+
+# 
 
 # ### Acceder a un elemento de la lista
 # 
@@ -116,6 +124,8 @@ print('El último elemento de la lista es: ', lista_con_elementos_varios[-1])
 print('El primer elemento de la lista usando indexación negativa es: ', lista_con_elementos_varios[-len(lista_con_elementos_varios)])
 
 
+
+# 
 
 # ### Acceso a un subconjunto de elementos
 # 
@@ -171,6 +181,8 @@ print('Resultado de [-6:-4:-2]: ', lista_ejemplo[-4:-7:-2])
 
 
 
+# 
+
 # ### Modificar elementos de una lista
 # 
 # Es posible modificar un elemento de una lista en Python con el operador de asignación `=`. Para ello, lo único que se necesita es el índice del elemento que se quiere modificar o el rango de índices:
@@ -202,6 +214,8 @@ print('Se encuentra e en lista_ejemplo?: ', 'e' in lista_ejemplo)
 print('Se encuentra a en lista_ejemplo?: ', 'a' in lista_ejemplo)
 print('No se encuentra a en lista_ejemplo?: ', 'a' not in lista_ejemplo)
 
+
+# 
 
 # ### Tabla resumen de otras operaciones
 
@@ -269,6 +283,8 @@ print('No se encuentra a en lista_ejemplo?: ', 'a' not in lista_ejemplo)
 #   </tr>
 # </tbody>
 # </table>
+
+# 
 
 # ## Sets
 
